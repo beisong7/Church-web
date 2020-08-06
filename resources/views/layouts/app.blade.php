@@ -36,6 +36,9 @@
 
 
     <div class="ckav-body">
+        @include('layouts.header')
+        @include('layouts.navbar')
+
         @yield('content')
     </div>
     @include('layouts.scripts.js')
