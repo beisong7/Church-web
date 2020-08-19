@@ -2,16 +2,17 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" type="image/png" href="{{ url('images/logo.png') }}"/>
 
-    <meta name="keywords" content="Winners Chapel Durumi, Winners, Durumi, Worship, Home, Signs, Wonders" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Winners Chapel Durumi, Home of Signs and Wonders. Worship with us every Sunday and Wednesdays. Jesus is Lord.">
+    <meta name="keywords" content="Winners Chapel Durumi, Winners, Durumi, Worship, Home, Signs, Wonders">
+    <meta name="author" content="synergynode.com,winnersdurumi.org">
 
     <!-- FAVICONS -->
     <link rel="icon" href="{{ url('') }}">

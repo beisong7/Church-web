@@ -16,7 +16,27 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'uuid',
+        'title',
+        'first_name',
+        'last_name',
+        'username',
+        'email',
+        'phone',
+        'image_key',
+        'address',
+        'office',
+        'active',
+        'password',
+        'role_id',
+        'last_seen',
+        'dob',
+        'countdown_pass',
+        'countdown_otp',
+        'otp',
+        'token',
+        'theme_type',
+        'email_verified_at',
     ];
 
     /**
@@ -36,4 +56,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getImageAttribute(){
+        if(file_exists($this->image_key)){
+            return url($this->image_key);
+        }else{
+            return url('images/user.png');
+        }
+    }
 }

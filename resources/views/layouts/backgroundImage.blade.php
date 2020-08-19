@@ -1,1 +1,1 @@
-<b data-bgholder="slideshow" class="full-wh bg-cover bg-cc zindex-1" data-slide-image="images/slider-01.jpg|images/winners-bg.jpg|images/slider-03.jpg"></b>
+<b data-bgholder="slideshow" class="full-wh bg-cover bg-cc zindex-1" data-slide-image="{{ $slides }}"></b> <!-- images/slider-01.jpg|images/winners-bg.jpg|images/slider-03.jpg -->
