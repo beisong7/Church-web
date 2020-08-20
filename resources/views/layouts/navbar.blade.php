@@ -14,19 +14,19 @@
         <li class="navigation-li">
             <a href="#team" class="navigation-a section-post">
                 <span class="icon"><i class="icon-user"></i></span>
-                <span class="text">Team <i class="fas fa-sort-down"></i></span>
+                <span class="text">Testimonies <i class="fas fa-sort-down"></i></span>
             </a>
         </li>
         <li class="navigation-li">
             <a href="#services" class="navigation-a section-post">
-                <span class="icon"><i class="icon-settings"></i></span>
+                <span class="icon"><i class="icon-star"></i></span>
                 <span class="text">Services <i class="fas fa-sort-down"></i></span>
             </a>
         </li>
         <li class="navigation-li">
             <a href="#portfolio" class="navigation-a section-post">
                 <span class="icon"><i class="icon-camera"></i></span>
-                <span class="text">Portfolio <i class="fas fa-sort-down"></i></span>
+                <span class="text">Gallery <i class="fas fa-sort-down"></i></span>
             </a>
         </li>
         <li class="navigation-li">

@@ -19,7 +19,7 @@
             <li class="{{ @$sidenav['home_cell'] }}  nav-item"><a href="#"><i class="feather icon-box"></i><span class="menu-title" data-i18n="Home Cell">Home Cell</span></a></li>
             <li class="{{ @$sidenav['pages'] }}  nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Pages">Pages</span></a></li>
             <li class="{{ @$sidenav['sermons'] }}  nav-item"><a href="#"><i class="feather icon-plus-circle"></i><span class="menu-title" data-i18n="Sermons">Sermons</span></a></li>
-            <li class="{{ @$sidenav['site_info'] }}  nav-item"><a href="#"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Site Info">Site Info</span></a></li>
+            <li class="{{ @$sidenav['site_info'] }}  nav-item"><a href="{{ route('site.info') }}"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Site Info">Site Info</span></a></li>
             <li class="{{ @$sidenav['slider'] }}  nav-item"><a href="{{ route('sliders') }}"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="Slider">Slider</span></a></li>
             <li class="{{ @$sidenav['testimony'] }}  nav-item"><a href="#"><i class="feather icon-heart"></i><span class="menu-title" data-i18n="Testimony">Testimony</span></a></li>
 

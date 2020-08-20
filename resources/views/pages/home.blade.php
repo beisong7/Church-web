@@ -14,11 +14,13 @@
 
             <!-- INTRO TEXT -->
             <div class="intro-text typo-light" data-ckav-smd="align-center">
-                <h2 class="heading xlarge bold-900 text-upper" data-ckav-smd="large">Winners Durumi</h2>
+                <h2 class="heading xlarge bold-900 text-upper" data-ckav-smd="large">{{ $site->home_title }}</h2>
                 <p class="heading-sub width-50" data-ckav-smd="width-100 mini">
-                    Home of signs and wonders.
+                    {{ $site->home_subtitle }}
                 </p>
-                <a href="#popup-content" class="set-popup button button-xlarge color-button-default color-hov-button-white solid radius-10" data-ckav-smd="button-medium">Lear More</a>
+                <!--
+                <a href="#services" class="button button-xlarge color-button-default color-hov-button-white solid radius-10" data-ckav-smd="button-medium">Lear More</a>
+                -->
             </div>
 
         </div>
@@ -104,7 +106,7 @@
 
                 <form action="form-data/notify-me.php" class="form-widget form-control-op-02" novalidate="novalidate">
                     <div class="field-wrp">
-                        <input type="hidden" name="to" value="c.kav.art@gmail.com">
+                        <input type="hidden" name="to" value="{{ $site->email }}">
 
                         <div class="row gt10">
                             <div class="col-md-12">
