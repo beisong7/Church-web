@@ -12,9 +12,9 @@
         <div class="container">
 
             <div class="section-heading-wrapper align-center width-px-700 margin-auto" data-ckav-smd="width-100">
-                <h2 class="heading-section text-upper default bold-900 animated" data-anim-in="fadeInUp" data-ckav-smd="medium">Our Team</h2>
+                <h2 class="heading-section text-upper default bold-900 animated" data-anim-in="fadeInUp" data-ckav-smd="medium">Testimonies</h2>
                 <p class="heading-section-sub small margin-b-0 animated" data-anim-in="fadeInUp|0.1" data-ckav-smd="mini">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quaerat architecto iusto nostrum dignissimos consectetur sit corrupti quos sed.
+                    Share your testimonies! Testimony shared is victory sustained!
                 </p>
             </div>
 

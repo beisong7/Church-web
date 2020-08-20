@@ -13,19 +13,19 @@
 
             <div class="row">
                 <div class="col align-center animated" data-anim-in="fadeInUp|0.1" data-ckav-smd="margin-b-30">
-                    <a href="#" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{ $site->facebook }}" target="_blank" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-facebook-f"></i></a>
                 </div>
 
                 <div class="col align-center animated" data-anim-in="fadeInUp|0.2" data-ckav-smd="margin-b-30">
-                    <a href="#" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-twitter"></i></a>
+                    <a href="{{ $site->twitter }}" target="_blank" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-twitter"></i></a>
                 </div>
 
                 <div class="col align-center animated" data-anim-in="fadeInUp|0.4" data-ckav-smd="margin-b-30">
-                    <a href="#" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ $site->instagram }}" target="_blank" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-instagram"></i></a>
                 </div>
 
                 <div class="col align-center animated" data-anim-in="fadeInUp|0.5" data-ckav-smd="margin-b-30">
-                    <a href="#" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-youtube"></i></a>
+                    <a href="{{ $site->youtube }}" target="_blank" class="button button-icon-xlarge color-button-white border-op-light-2 radius-10"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
