@@ -12,7 +12,7 @@
 
     <meta name="description" content="Winners Chapel Durumi, Home of Signs and Wonders. Worship with us every Sunday and Wednesdays. Jesus is Lord.">
     <meta name="keywords" content="Winners Chapel Durumi, Winners, Durumi, Worship, Home, Signs, Wonders">
-    <meta name="author" content="synergynode.com,winnersdurumi.org">
+    <meta name="author" content="synergynode.com, winnersdurumi.org, technical-unit">
 
     <!-- FAVICONS -->
     <link rel="icon" href="{{ url('') }}">

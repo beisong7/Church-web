@@ -6,9 +6,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
+    <meta name="description" content="Winners Chapel Durumi, Home of Signs and Wonders. Worship with us every Sunday and Wednesdays. Jesus is Lord.">
+    <meta name="keywords" content="Winners Chapel Durumi, Winners, Durumi, Worship, Home, Signs, Wonders">
+    <meta name="author" content="synergynode.com, winnersdurumi.org, technical-unit">
     <title> Winners Durumi | Admin </title>
     <link rel="icon" type="image/png" href="{{ url('images/logo.png') }}"/>
     <link rel="apple-touch-icon" href="{{ url('images/logo.png') }}">
