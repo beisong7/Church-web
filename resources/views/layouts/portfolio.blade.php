@@ -1,3 +1,8 @@
+<style>
+    .hb-rad-10 .hover-box{
+        border-radius: 10px;
+    }
+</style>
 <!--=================================
         = PORTFOLIO SECTION
         ==================================-->
@@ -12,120 +17,44 @@
         <div class="container">
 
             <div class="portfolio-widget grid-portfolio portfolio-row grid-03" data-zoom-gallery="yes" data-ckav-md="grid-02" data-ckav-sm="grid-01">
-                <div class="portfolio-col animated" data-anim-in="fadeInUp|0.1">
+                <div class="portfolio-col animated p-3 hb-rad-10" data-anim-in="fadeInUp|0.1">
                     <figure class="hover-box hover-box-01">
 
                         <!-- OVERLAY -->
                         <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
                             <div class="info-text text-center">
-                                <a href="images/grid-portfolio-01.jpg" class="zoom-img button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-size-fullscreen"></i></a>
+                                <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-download"></i></a>
+                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PDF Outline</h3>
+                                <p class="mr-0 fs12 op-08">Updated {{ date('F d, Y') }}</p>
+                            </div>
+                        </div>
+
+                        <!-- IMAGE -->
+                        <img src="{{ url('images/homecell.jpg') }}" alt="homecell image">
+
+                    </figure>
+                </div>
+
+                <div class="portfolio-col animated p-3 hb-rad-10" data-anim-in="fadeInUp|0.2">
+                    <figure class="hover-box hover-box-01">
+
+                        <!-- OVERLAY -->
+                        <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
+                            <div class="info-text text-center">
+                                {{--<a href="images/grid-portfolio-02.jpg" class="zoom-img button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-size-fullscreen"></i></a>--}}
                                 <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-link"></i></a>
-                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PSD Mockup</h3>
-                                <p class="mr-0 fs12 op-08">Lorem ipsum dolor sit amet consectetur</p>
+                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">Latest Sermons</h3>
+                                <p class="mr-0 fs12 op-08">I will meditate also of all thy work, and talk of thy doings | Psalm 77:12 </p>
                             </div>
                         </div>
 
                         <!-- IMAGE -->
-                        <img src="images/grid-portfolio-01.jpg" alt="portfolio image">
+                        <img src="{{ url('images/sermon.jpg') }}" alt="portfolio image">
 
                     </figure>
                 </div>
 
-                <div class="portfolio-col animated" data-anim-in="fadeInUp|0.1">
-                    <figure class="hover-box hover-box-01">
-
-                        <!-- OVERLAY -->
-                        <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
-                            <div class="info-text text-center">
-                                <a href="images/grid-portfolio-02.jpg" class="zoom-img button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-size-fullscreen"></i></a>
-                                <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-link"></i></a>
-                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PSD Mockup</h3>
-                                <p class="mr-0 fs12 op-08">Lorem ipsum dolor sit amet consectetur</p>
-                            </div>
-                        </div>
-
-                        <!-- IMAGE -->
-                        <img src="images/grid-portfolio-02.jpg" alt="portfolio image">
-
-                    </figure>
-                </div>
-
-                <div class="portfolio-col animated" data-anim-in="fadeInUp|0.2">
-                    <figure class="hover-box hover-box-01">
-
-                        <!-- OVERLAY -->
-                        <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
-                            <div class="info-text text-center">
-                                <a href="images/grid-portfolio-03.jpg" class="zoom-img button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-size-fullscreen"></i></a>
-                                <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-link"></i></a>
-                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PSD Mockup</h3>
-                                <p class="mr-0 fs12 op-08">Lorem ipsum dolor sit amet consectetur</p>
-                            </div>
-                        </div>
-
-                        <!-- IMAGE -->
-                        <img src="images/grid-portfolio-03.jpg" alt="portfolio image">
-
-                    </figure>
-                </div>
-
-                <div class="portfolio-col animated" data-anim-in="fadeInUp|0.3">
-                    <figure class="hover-box hover-box-01">
-
-                        <!-- OVERLAY -->
-                        <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
-                            <div class="info-text text-center">
-                                <a href="images/grid-portfolio-04.jpg" class="zoom-img button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-size-fullscreen"></i></a>
-                                <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-link"></i></a>
-                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PSD Mockup</h3>
-                                <p class="mr-0 fs12 op-08">Lorem ipsum dolor sit amet consectetur</p>
-                            </div>
-                        </div>
-
-                        <!-- IMAGE -->
-                        <img src="images/grid-portfolio-04.jpg" alt="portfolio image">
-
-                    </figure>
-                </div>
-
-                <div class="portfolio-col animated" data-anim-in="fadeInUp|0.4">
-                    <figure class="hover-box hover-box-01">
-
-                        <!-- OVERLAY -->
-                        <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
-                            <div class="info-text text-center">
-                                <a href="images/grid-portfolio-05.jpg" class="zoom-img button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-size-fullscreen"></i></a>
-                                <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-link"></i></a>
-                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PSD Mockup</h3>
-                                <p class="mr-0 fs12 op-08">Lorem ipsum dolor sit amet consectetur</p>
-                            </div>
-                        </div>
-
-                        <!-- IMAGE -->
-                        <img src="images/grid-portfolio-05.jpg" alt="portfolio image">
-
-                    </figure>
-                </div>
-
-                <div class="portfolio-col animated" data-anim-in="fadeInUp|0.5">
-                    <figure class="hover-box hover-box-01">
-
-                        <!-- OVERLAY -->
-                        <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
-                            <div class="info-text text-center">
-                                <a href="images/grid-portfolio-06.jpg" class="zoom-img button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-size-fullscreen"></i></a>
-                                <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="pe-7s-link"></i></a>
-                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PSD Mockup</h3>
-                                <p class="mr-0 fs12 op-08">Lorem ipsum dolor sit amet consectetur</p>
-                            </div>
-                        </div>
-
-                        <!-- IMAGE -->
-                        <img src="images/grid-portfolio-06.jpg" alt="portfolio image">
-
-                    </figure>
-                </div>
-
+                {{--@include('backup.info_cards')--}}
             </div>
 
         </div>

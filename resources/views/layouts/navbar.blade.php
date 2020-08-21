@@ -25,8 +25,8 @@
         </li>
         <li class="navigation-li">
             <a href="#portfolio" class="navigation-a section-post">
-                <span class="icon"><i class="icon-camera"></i></span>
-                <span class="text">Gallery <i class="fas fa-sort-down"></i></span>
+                <span class="icon"><i class="icon-info"></i></span>
+                <span class="text">Information <i class="fas fa-sort-down"></i></span>
             </a>
         </li>
         <li class="navigation-li">
