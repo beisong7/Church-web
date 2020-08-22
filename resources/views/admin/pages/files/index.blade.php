@@ -74,19 +74,25 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                     <div class="card ecommerce-card">
                         <div class="card-content">
                             <a href="#" style=" ">
-                                <div class="item-img text-center" style="position: relative;xvertical-align: middle;text-align: center;">
-                                    <img class="img-fluid" src="{{ $file->thumb }}" alt="img-placeholder" style="max-height: 100%;max-width: 100%;width: auto;height: auto;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;">
+                                <div class="item-img text-center" style="position: relative;vertical-align: middle;text-align: center;">
+                                    @if($file->isImg)
+                                        <img class="img-fluid" src="{{ $file->thumb }}" alt="img-placeholder" style="max-height: 100%;max-width: 100%;width: auto;height: auto;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;">
+                                    @else
+                                        <i title="{{ $file->name }}" class="fa fa-{{ $file->icon }}" style="color: #fff; font-size: 100px; padding-top: 15%"></i>
+
+
+                                    @endif
                                 </div>
                             </a>
                             <div class="card-body">
 
                                 <div>
-                                    <h5 class="item-description">{{ $file->name }}</h5>
+                                    <h5 title="{{ $file->name }}" class="item-description">{{ $file->name }}</h5>
                                 </div>
                                 <div class="item-wrapper">
                                     <div>
                                         <h6 class="item-price">
-                                            {{ $file->sized }}MB
+                                            {{ $file->sized }}
                                         </h6>
                                     </div>
                                 </div>
@@ -96,7 +102,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                                     <i class="fa fa-trash"></i> <span>Delete</span>
                                 </div>
                                 <div class="cart">
-                                    <a href="#"><i class="feather icon-layers"></i> <span class="">Preview</span></a>
+                                    <a href="#"><i class="text-white feather icon-layers"></i> <span class="">Preview</span></a>
                                 </div>
                             </div>
                         </div>

@@ -20,10 +20,18 @@ class ImageUpload extends Model
     ];
 
     public function getSizedAttribute(){
+        //6 digits is kb
+        //7 digits is MB
         if(!empty($this->size )){
-            return intval($this->size /100000);
+            $mb = 1000000;
+            $rSize = number_format($this->size /1000, 1);
+            $qt = "kb";
+            if($rSize>=$mb){
+                $qt = "mb";
+            }
+            return strval($rSize).$qt;
         }
-        return 0;
+        return "0 kb";
     }
 
     public function thumbnail(){
@@ -36,6 +44,25 @@ class ImageUpload extends Model
 
     public function getThumbAttribute(){
         return url($this->thumbnail->url);
+    }
+
+    public function getIsImgAttribute(){
+        $allowed = ['jpg', 'jpeg', 'png', 'gif'];
+        if(in_array($this->ext, $allowed)){
+            return true;
+        }
+        return false;
+    }
+
+    public function getIconAttribute(){
+//        return 'file';
+        switch (strtolower($this->ext)){
+            case 'pdf':
+                return 'file-pdf-o';
+                break;
+            default:
+                return 'file';
+        }
     }
 
 }

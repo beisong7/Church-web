@@ -16,6 +16,8 @@
     <div class="inner-section animated" data-anim-in="fadeIn" data-anim-out="fadeOut">
         <div class="container">
 
+            <h5 class="text-center">Touch / Hover on cards to view details </h5>
+
             <div class="portfolio-widget grid-portfolio portfolio-row grid-03" data-zoom-gallery="yes" data-ckav-md="grid-02" data-ckav-sm="grid-01">
                 <div class="portfolio-col animated p-3 hb-rad-10" data-anim-in="fadeInUp|0.1">
                     <figure class="hover-box hover-box-01">
@@ -23,9 +25,20 @@
                         <!-- OVERLAY -->
                         <div class="overlay flex-bl typo-light" data-linear-gradient="rgba(31,34,41,0.5)|rgba(31,34,41,1)">
                             <div class="info-text text-center">
-                                <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-download"></i></a>
-                                <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">PDF Outline</h3>
-                                <p class="mr-0 fs12 op-08">Updated {{ date('F d, Y') }}</p>
+                                @if(!empty($outline))
+                                    <a href="{{ $outline->file->url }}" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-download"></i></a>
+                                    <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">WSF Outline</h3>
+                                    <p class="mr-0 fs12 op-08">{{ $outline->name }}</p>
+                                    <p class="text-center text-white">
+                                        <small>{{ date('F d, Y', $outline->dfh) }}</small>
+                                    </p>
+                                @else
+                                    <a href="#" target="_blank" class="button button-icon radius-full margin-lr-5 color-button-default solid"><i class="icon-download"></i></a>
+                                    <h3 class="heading-content tiny bold-600 margin-b-5 margin-t-30">WSF Outline</h3>
+                                    <p class="mr-0 fs12 op-08">No current outline</p>
+                                @endif
+
+
                             </div>
                         </div>
 

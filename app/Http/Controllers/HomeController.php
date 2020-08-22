@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\SiteSettings;
 use App\Models\Slider;
+use App\Models\WsfOutline;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,6 +28,7 @@ class HomeController extends Controller
     {
         $sliders = Slider::where('active', true)->get();
         $site = SiteSettings::first();
+        $outline = WsfOutline::where('active', true)->where('current', true)->first();
         if(empty($site)){
             $site = new SiteSettings();
         }
@@ -38,6 +40,7 @@ class HomeController extends Controller
         return view('pages.home')->with([
             'slides'=>$slides,
             'site'=>$site,
+            'outline'=>$outline,
         ]);
     }
 

@@ -45,7 +45,9 @@ class ImageUploadController extends Controller
         $image->valid = true;
         try{
             //make thumb
-            $this->Thumb($image);
+            if($this->isImage(strtolower($extension))){
+                $this->Thumb($image);
+            }
             //SAVE IMAGE
             $image->save();
             return response()->json(["status" => "success", "data" => $image]);
