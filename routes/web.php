@@ -18,6 +18,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('spirit-gate', 'Auth\LoginController@adminLogin')->name('admin.login');
 Route::post('spirit-gate', 'Auth\LoginController@validateAdmin')->name('admin.auth');
 Route::post('contact-us', 'HomeController@contactUs')->name('contact.us');
+Route::get('download/wsf-outline/{uuid}', 'Dashboard\WsfOutlineController@download')->name('download.wsf.outline');
 
 
 

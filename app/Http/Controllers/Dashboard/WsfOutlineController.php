@@ -151,4 +151,11 @@ class WsfOutlineController extends Controller
         }
         return redirect()->route('wsf.index')->withErrors(['Resource not found']);
     }
+
+    public function download($uuid){
+        $outline = WsfOutline::where('uuid', $uuid)->first();
+        if(!empty($outline)){
+            return response()->download($outline->file->url);
+        }
+    }
 }
