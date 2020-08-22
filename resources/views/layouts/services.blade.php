@@ -18,7 +18,7 @@
                             <div class="info-obj radius-10 margin-b-0 center info-box-01 img-t padding-20 gap-20 mini bgcolor-default">
                                 <div class="info">
                                     <h3 class="heading-content bold-700 text-upper margin-b-10 tiny">Sunday Service</h3>
-                                    <p class="margin-b-0">Covenant day of Fruitfulness | 6:30 AM | 8:00 AM | 9:30 AM</p>
+                                    <p class="margin-b-0">Encounter with Destiny | 6:30 AM | 8:00 AM | 9:30 AM</p>
                                 </div>
                             </div>
                         </div>
@@ -29,6 +29,9 @@
                                 <div class="info">
                                     <h3 class="heading-content bold-700 text-upper margin-b-10 tiny">Midweek Service</h3>
                                     <p class="margin-b-0">Midweek Communion Service | 5:30 PM</p>
+                                    <p class="text-center">
+                                        <small>Fasting and Prayer</small>
+                                    </p>
 
                                 </div>
                             </div>

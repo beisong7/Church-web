@@ -6,7 +6,7 @@
 <!--=================================
         = PORTFOLIO SECTION
         ==================================-->
-<div id="portfolio" class="popup-section portfolio-section typo-light">
+<div id="information" class="popup-section portfolio-section typo-light">
 
     <!-- CLOSE BUTTON -->
     <div class="close-section">

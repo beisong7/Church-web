@@ -12,7 +12,7 @@
             </a>
         </li>
         <li class="navigation-li">
-            <a href="#team" class="navigation-a section-post">
+            <a href="#testimony" class="navigation-a section-post">
                 <span class="icon"><i class="icon-user"></i></span>
                 <span class="text">Testimonies <i class="fas fa-sort-down"></i></span>
             </a>
@@ -24,7 +24,7 @@
             </a>
         </li>
         <li class="navigation-li">
-            <a href="#portfolio" class="navigation-a section-post">
+            <a href="#information" class="navigation-a section-post">
                 <span class="icon"><i class="icon-info"></i></span>
                 <span class="text">Information <i class="fas fa-sort-down"></i></span>
             </a>
