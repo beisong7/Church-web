@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use App\Models\SiteSettings;
 use App\Models\Slider;
 use App\Models\WsfOutline;
@@ -29,6 +30,7 @@ class HomeController extends Controller
         $sliders = Slider::where('active', true)->get();
         $site = SiteSettings::first();
         $outline = WsfOutline::where('active', true)->where('current', true)->first();
+        $services = Service::where('active', true)->orderBy('date', 'desc')->get();
         if(empty($site)){
             $site = new SiteSettings();
         }
@@ -41,6 +43,7 @@ class HomeController extends Controller
             'slides'=>$slides,
             'site'=>$site,
             'outline'=>$outline,
+            'services'=>$services,
         ]);
     }
 

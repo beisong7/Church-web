@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\ImageUpload;
 use App\Models\SiteSettings;
+use App\Models\Slider;
+use App\User;
 use Illuminate\Http\Request;
 
 class BoardController extends Controller
@@ -14,7 +16,16 @@ class BoardController extends Controller
     }
 
     public function dashboard(Request $request){
-        return view('admin.pages.dashboard.index');
+        $admins = User::where('active', true)->select(['id'])->get()->count();
+        $sliders = Slider::where('active', true)->select(['id'])->get()->count();
+        $files = ImageUpload::where('id', '!=', null)->select(['id'])->get()->count();
+
+        return view('admin.pages.dashboard.index')
+            ->with([
+                'admins'=>$admins,
+                'sliders'=>$sliders,
+                'files'=>$files,
+            ]);
     }
 
     public function filesUpload(Request $request){

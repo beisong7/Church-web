@@ -13,30 +13,51 @@
 
             <div class="row align-items-center gt60">
                 <div class="col-lg-8">
-                    <div class="row gt10 margin-b-10" data-ckav-smd="margin-b-0">
-                        <div class="col-lg-12 animated" data-anim-in="fadeInUp|0.1" data-ckav-smd="margin-b-30">
-                            <div class="info-obj radius-10 margin-b-0 center info-box-01 img-t padding-20 gap-20 mini bgcolor-default">
-                                <div class="info">
-                                    <h3 class="heading-content bold-700 text-upper margin-b-10 tiny">Sunday Service</h3>
-                                    <p class="margin-b-0">Encounter with Destiny | 6:30 AM | 8:00 AM | 9:30 AM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gt10 mb-2">
-                        <div class="col-lg-12 animated" data-anim-in="fadeInUp|0.2" data-ckav-smd="margin-b-30">
-                            <div class="info-obj radius-10 margin-b-0 center info-box-01 img-t padding-20 gap-20 mini bgcolor-default">
-                                <div class="info">
-                                    <h3 class="heading-content bold-700 text-upper margin-b-10 tiny">Midweek Service</h3>
-                                    <p class="margin-b-0">Midweek Communion Service | 5:30 PM</p>
-                                    <p class="text-center">
-                                        <small>Fasting and Prayer</small>
-                                    </p>
 
+                    @forelse($services as $key=>$service)
+                        <div class="row gt10 margin-b-10">
+                            <div class="col-lg-12 animated" data-anim-in="fadeInUp|0.{{ $key+1 }}" data-ckav-smd="margin-b-30">
+                                <div class="info-obj radius-10 margin-b-0 center info-box-01 img-t padding-20 gap-20 mini bgcolor-default">
+                                    <div class="info">
+                                        <h3 class="heading-content bold-700 text-upper margin-b-10 tiny">{{ $service->title }}</h3>
+                                        <p class="margin-b-0">{{ $service->theme }} </p>
+                                        <p class="margin-b-0"><small>{{ date('F d', $service->date) }} | {{ $service->service_time }}</small></p>
+                                        @if(!empty($service->sub_title))
+                                            <p class="text-center"><small>{{ $service->sub_title }}</small></p>
+                                        @endif
+
+                                        @if(!empty($service->instruction))
+                                            <p class="text-center"><small>{{ $service->instruction }}</small></p>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @empty
+                        <div class="row gt10 margin-b-10" data-ckav-smd="margin-b-0">
+                            <div class="col-lg-12 animated" data-anim-in="fadeInUp|0.1" data-ckav-smd="margin-b-30">
+                                <div class="info-obj radius-10 margin-b-0 center info-box-01 img-t padding-20 gap-20 mini bgcolor-default">
+                                    <div class="info">
+                                        <h3 class="heading-content bold-700 text-upper margin-b-10 tiny">Sunday Service</h3>
+                                        <p class="margin-b-0">6:30 AM | 8:00 AM | 9:30 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gt10 mb-2">
+                            <div class="col-lg-12 animated" data-anim-in="fadeInUp|0.2" data-ckav-smd="margin-b-30">
+                                <div class="info-obj radius-10 margin-b-0 center info-box-01 img-t padding-20 gap-20 mini bgcolor-default">
+                                    <div class="info">
+                                        <h3 class="heading-content bold-700 text-upper margin-b-10 tiny">Midweek Service</h3>
+                                        <p class="margin-b-0">Midweek Communion Service | 5:30 PM</p>
+                                        <p class="text-center"><small>Fasting and Prayer</small></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforelse
+
 
 
                 </div>

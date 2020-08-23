@@ -36,7 +36,7 @@ $bd_class="2-columns";
                                     <i class="feather icon-users text-primary font-medium-5"></i>
                                 </div>
                             </div>
-                            <h2 class="text-bold-700 mt-1 mb-25">{{ "0" }}</h2>
+                            <h2 class="text-bold-700 mt-1 mb-25">{{ $admins }}</h2>
                             <p class="mb-0">Available Admin</p>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ $bd_class="2-columns";
                                     <i class="feather icon-layers text-primary font-medium-5"></i>
                                 </div>
                             </div>
-                            <h2 class="text-bold-700 mt-1 mb-25">{{ "0" }}</h2>
+                            <h2 class="text-bold-700 mt-1 mb-25">{{ $sliders }}</h2>
                             <p class="mb-0">Active Sliders</p>
                         </div>
                     </div>
@@ -101,11 +101,12 @@ $bd_class="2-columns";
                                     <i class="feather icon-file text-primary font-medium-5"></i>
                                 </div>
                             </div>
-                            <h2 class="text-bold-700 mt-1 mb-25">{{ "0" }}</h2>
+                            <h2 class="text-bold-700 mt-1 mb-25">{{ $files }}</h2>
                             <p class="mb-0">Files</p>
                         </div>
                     </div>
                 </div>
+
                 <!--
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card">

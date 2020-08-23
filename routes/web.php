@@ -52,9 +52,15 @@ Route::group(['middleware'=>'admin'], function () {
         Route::resource('admin', 'Admin\AdminController');
         Route::get('disable-admin', 'Admin\AdminController@disable')->name('admin.pop');
 
+        //WSF Routes
         Route::resource('wsf', 'Dashboard\WsfOutlineController');
         Route::get('delete-outline', 'Dashboard\WsfOutlineController@delete')->name('outline.pop');
         Route::get('outline/toggle/{uuid}', 'Dashboard\WsfOutlineController@toggleCurrent')->name('wsf.toggle');
+
+        //Services Routes
+        Route::resource('service', 'Dashboard\ServiceController');
+        Route::get('delete-outline', 'Dashboard\ServiceController@delete')->name('service.pop');
+        Route::get('service/toggle/{uuid}', 'Dashboard\ServiceController@toggleCurrent')->name('service.toggle');
 
     });
 });

@@ -1,5 +1,5 @@
 <?php
-$sidenav['wsf_outline'] = 'active';
+$sidenav['service'] = 'active';
 $data_col = "2-columns";
 $bd_class="2-columns";
 ?>
@@ -24,11 +24,11 @@ $bd_class="2-columns";
         <div class="content-header-left col-md-12 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-md-10 col-sm-12">
-                    <h2 class="content-header-title float-left mb-0">Wsf Outlines</h2>
+                    <h2 class="content-header-title float-left mb-0"> Services</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('wsf.index') }}">Wsf Outlines</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('service.index') }}"> Services</a></li>
                             <li class="breadcrumb-item active">New</li>
                         </ol>
                     </div>
@@ -44,7 +44,7 @@ $bd_class="2-columns";
                         <ul class="nav nav-tabs mb-3" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center active" id="account-tab" data-toggle="tab" href="#account" aria-controls="account" role="tab" aria-selected="true">
-                                    <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">New Outline</span>
+                                    <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">New Service</span>
                                 </a>
                             </li>
 
@@ -54,44 +54,62 @@ $bd_class="2-columns";
                                 <!-- users edit media object start -->
 
 
-                                <form method="post" action="{{ route('wsf.store') }}" enctype="multipart/form-data">
+                                <form method="post" action="{{ route('service.store') }}" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <div class="controls">
-                                                    <label>Outline Title / Name</label>
-                                                    <input type="text" name="name" class="form-control" placeholder="Title" required data-validation-required-message="This title field is required">
+                                                    <label>Service Title / Name *</label>
+                                                    <input type="text" name="title" class="form-control" placeholder="sunday service, midweek service" required data-validation-required-message="This title field is required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
-                                                    <label>Date for Homecell</label>
-                                                    <input type="date" name="dfh" class="form-control" placeholder="Date" required data-validation-required-message="This field is required">
+                                                    <label>Service Theme *</label>
+                                                    <input type="text" name="theme" class="form-control" placeholder="example: Encounter with destiny..." required data-validation-required-message="This title field is required">
                                                 </div>
                                             </div>
-
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Service Sub Title</label>
+                                                    <input type="text" name="sub_title" class="form-control" placeholder="example: fasting and prayer , anointing service">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Service Instruction</label>
+                                                    <input type="text" name="instruction" class="form-control" placeholder="example: come with your anointing oil">
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <div class="controls">
-                                                    <label>Outline File</label>
-                                                    <select name="file_id" class="form-control">
-                                                        <option disabled selected>Select File</option>
-                                                        @foreach($files as $file)
-                                                            <option value="{{ $file->uuid }}">{{ $file->name }}</option>
-                                                        @endforeach
-
-                                                    </select>
+                                                    <label>Service Time Schedule *</label>
+                                                    <input type="text" name="service_time" class="form-control" placeholder="example: 9:30 AM | 5:30 PM" required data-validation-required-message="This title field is required">
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Service Link</label>
+                                                    <input type="text" name="service_link" class="form-control" placeholder="example: http://youtube.com/c/winnersdurumi">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="controls">
+                                                    <label>Service Date *</label>
+                                                    <input type="date" name="date" class="form-control" placeholder="Date" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                             <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">
-                                                Create Downloadable Outline
+                                                Create Downloadable Service
                                             </button>
                                         </div>
                                     </div>
