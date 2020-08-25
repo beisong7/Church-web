@@ -67,7 +67,7 @@ $bd_class="2-columns";
                                                 <div class="media-body mt-50">
                                                     <div class="col-12 d-flex mt-1 px-0">
                                                         <fieldset class="form-group">
-                                                            <label for="basicInputFile">With Browse button</label>
+                                                            <label for="basicInputFile">Select user image (optional)</label>
                                                             <div class="custom-file">
                                                                 <input type="file" class="custom-file-input" id="inputGroupFile01">
                                                                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
@@ -83,19 +83,19 @@ $bd_class="2-columns";
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Username</label>
-                                                    <input type="text" class="form-control" placeholder="Username" value="adoptionism744" required data-validation-required-message="This username field is required">
+                                                    <input type="text" name="username" class="form-control" placeholder="Username" value="{{ old('username') }}" required data-validation-required-message="This field is required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>First Name</label>
-                                                    <input type="text" class="form-control" placeholder="Name" value="Angelo Sashington" required data-validation-required-message="This name field is required">
+                                                    <input type="text" name="first_name" class="form-control" placeholder="First Name" value="{{ old('first_name') }}" required data-validation-required-message="This  field is required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Last Name</label>
-                                                    <input type="text" class="form-control" placeholder="Name" value="Angelo Sashington" required data-validation-required-message="This name field is required">
+                                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name" value="{{ old('last_name') }}" required data-validation-required-message="This field is required">
                                                 </div>
                                             </div>
                                         </div>
@@ -104,16 +104,17 @@ $bd_class="2-columns";
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>E-mail</label>
-                                                    <input type="email" class="form-control" placeholder="Email" value="angelo@sashington.com" required data-validation-required-message="This email field is required">
+                                                    <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}" required data-validation-required-message="This email field is required">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Role</label>
                                                 <select class="form-control">
-                                                    <option>Active</option>
-                                                    <option>Blocked</option>
-                                                    <option>deactivated</option>
+                                                    <option selected disabled>Select Role</option>
+                                                    @foreach($roles as $role)
+                                                        <option value="{{ $role->uuid }}">{{ $role->name }}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
 

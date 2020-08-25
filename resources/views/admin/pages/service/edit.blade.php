@@ -29,7 +29,7 @@ $bd_class="2-columns";
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('service.index') }}"> Services</a></li>
-                            <li class="breadcrumb-item active">New</li>
+                            <li class="breadcrumb-item active">Edit</li>
                         </ol>
                     </div>
                 </div>
@@ -38,13 +38,18 @@ $bd_class="2-columns";
     </div>
     <div class="content-body">
         <section class="users-edit">
+            <div class="row">
+                <div class="col">
+                    @include('layouts.notice')
+                </div>
+            </div>
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
                         <ul class="nav nav-tabs mb-3" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center active" id="account-tab" data-toggle="tab" href="#account" aria-controls="account" role="tab" aria-selected="true">
-                                    <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">New Service</span>
+                                    <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Edit {{ $service->title }}</span>
                                 </a>
                             </li>
 
@@ -54,33 +59,34 @@ $bd_class="2-columns";
                                 <!-- users edit media object start -->
 
 
-                                <form method="post" action="{{ route('service.store') }}" enctype="multipart/form-data">
+                                <form method="post" action="{{ route('service.update', $service->uuid) }}" enctype="multipart/form-data">
                                     @csrf
+                                    {{ method_field('put') }}
 
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Service Title / Name *</label>
-                                                    <input type="text" name="title" class="form-control" placeholder="sunday service, midweek service" required data-validation-required-message="This title field is required">
+                                                    <input type="text" name="title" value="{{ $service->title }}" class="form-control" placeholder="sunday service, midweek service" required data-validation-required-message="This title field is required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Service Theme *</label>
-                                                    <input type="text" name="theme" class="form-control" placeholder="example: Encounter with destiny..." required data-validation-required-message="This title field is required">
+                                                    <input type="text" name="theme" value="{{ $service->theme }}" class="form-control" placeholder="example: Encounter with destiny..." required data-validation-required-message="This title field is required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Service Sub Title</label>
-                                                    <input type="text" name="sub_title" class="form-control" placeholder="example: fasting and prayer , anointing service">
+                                                    <input type="text" name="sub_title" value="{{ $service->sub_title }}" class="form-control" placeholder="example: fasting and prayer , anointing service">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Service Instruction</label>
-                                                    <input type="text" name="instruction" class="form-control" placeholder="example: come with your anointing oil">
+                                                    <input type="text" name="instruction" value="{{ $service->instruction }}" class="form-control" placeholder="example: come with your anointing oil">
                                                 </div>
                                             </div>
                                         </div>
@@ -89,19 +95,19 @@ $bd_class="2-columns";
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Service Time Schedule *</label>
-                                                    <input type="text" name="service_time" class="form-control" placeholder="example: 9:30 AM | 5:30 PM" required data-validation-required-message="This title field is required">
+                                                    <input type="text" name="service_time" value="{{ $service->service_time }}" class="form-control" placeholder="example: 9:30 AM | 5:30 PM" required data-validation-required-message="This title field is required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
                                                     <label>Service Link</label>
-                                                    <input type="text" name="service_link" class="form-control" placeholder="example: http://youtube.com/c/winnersdurumi">
+                                                    <input type="text" name="service_link" value="{{ $service->service_link }}" class="form-control" placeholder="example: http://youtube.com/c/winnersdurumi">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
-                                                    <label>Service Date *</label>
-                                                    <input type="date" name="date" class="form-control" placeholder="Date" required data-validation-required-message="This field is required">
+                                                    <label>Service Date * </label><!-- 2020-08-30 -->
+                                                    <input type="date" name="date" value="{{ date('Y-m-d', $service->date) }}" class="form-control" placeholder="Date" required data-validation-required-message="This field is required">
                                                 </div>
                                             </div>
 
@@ -109,7 +115,7 @@ $bd_class="2-columns";
 
                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                             <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">
-                                                Create Service
+                                                Update Service
                                             </button>
                                         </div>
                                     </div>

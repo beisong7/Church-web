@@ -77,15 +77,14 @@ class ServiceController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Service  $Service
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Service $Service)
+
+    public function edit( $uuid)
     {
-        //
+        $service = $this->services->oneWith('uuid', $uuid);
+        if(!empty($service)){
+            return view('admin.pages.service.edit', compact('service'));
+        }
+        return redirect()->route('service.index')->withMessage('Resource not found.');
     }
 
     /**
@@ -95,9 +94,23 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $Service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $Service)
+    public function update(Request $request, $uuid)
     {
-        //
+
+        $service = $this->services->oneWith('uuid', $uuid);
+        if(!empty($service)){
+            $service->title = $request->input('title');
+            $service->theme = $request->input('theme');
+            $service->sub_title = $request->input('sub_title');
+            $service->instruction = $request->input('instruction');
+            $service->service_time = $request->input('service_time');
+            $service->service_link = $request->input('service_link');
+            $service->date = strtotime($request->input('date'));
+            $service->update();
+            return back()->withMessage('Service updated successfully');
+        }
+
+        return redirect()->route('service.index')->withMessage('Resource not found.');
     }
 
     /**

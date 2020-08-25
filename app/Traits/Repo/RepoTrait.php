@@ -4,7 +4,7 @@ namespace App\Traits\Repo;
 
 trait RepoTrait {
 
-    public function modify($query, $paginate=null, $selection=null, $order=null, $first=false){
+    public function modify($query, $paginate=null, $selection=null, $order=null, $first=false, $takeAmount=null){
 
         if(!empty($selection)){
             $query->select($selection);
@@ -19,8 +19,11 @@ trait RepoTrait {
         }else{
             if($first){
                 return $query->first();
+            }elseif (!empty($takeAmount)){
+                return $query->take($takeAmount)->get();
+            }else{
+                return $query->get();
             }
-            return $query->get();
         }
 
 

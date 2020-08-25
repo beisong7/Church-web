@@ -7,6 +7,7 @@
  * Time: 2:52 PM
  */
 namespace App\Repository;
+use App\Models\Role;
 use App\Traits\Repo\RepoTrait;
 use App\User;
 
@@ -17,5 +18,14 @@ class AdminRepository
         $query = User::where('id', '!=' , null);
 
         return $this->modify($query, $pagination);
+    }
+
+    public function getActiveRoles(){
+        return Role::where('active', true)->select(['uuid', 'name'])->get();
+    }
+
+    public function oneWith($key, $val){
+        return User::where($key, $val)->first();
+
     }
 }

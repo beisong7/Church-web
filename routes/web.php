@@ -44,11 +44,11 @@ Route::group(['middleware'=>'admin'], function () {
         Route::get('add-slider/{uuid}', 'Dashboard\SliderController@add')->name('add.slider');
         Route::get('pop-slider', 'Dashboard\SliderController@pop')->name('slider.pop');
 
-        //site info routes
+        //Site info routes
         Route::get('site-info', 'Dashboard\BoardController@siteInfo')->name('site.info');
         Route::post('site-info', 'Dashboard\BoardController@siteInfoUpdate')->name('site.info.update');
 
-        //administrators (bundle)
+        //Administrators (bundle)
         Route::resource('admin', 'Admin\AdminController');
         Route::get('disable-admin', 'Admin\AdminController@disable')->name('admin.pop');
 
@@ -61,6 +61,11 @@ Route::group(['middleware'=>'admin'], function () {
         Route::resource('service', 'Dashboard\ServiceController');
         Route::get('delete-outline', 'Dashboard\ServiceController@delete')->name('service.pop');
         Route::get('service/toggle/{uuid}', 'Dashboard\ServiceController@toggleCurrent')->name('service.toggle');
+
+        //Roles Routes
+        Route::resource('role', 'Dashboard\RoleController');
+        Route::get('delete-role', 'Dashboard\RoleController@delete')->name('role.pop');
+        Route::get('role/toggle/{uuid}', 'Dashboard\RoleController@toggleCurrent')->name('role.toggle');
 
     });
 });

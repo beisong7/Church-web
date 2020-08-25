@@ -25,4 +25,9 @@ class FileRepository
 
         return $this->modify($query, $pagination);
     }
+
+    public function oneWith($key, $val){
+        return ImageUpload::where($key, $val)->first();
+
+    }
 }

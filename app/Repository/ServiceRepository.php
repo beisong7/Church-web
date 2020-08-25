@@ -25,8 +25,10 @@ class ServiceRepository
         $query->orderBy($order[0],$order[1]);
 
         return $query->take(60)->get();
+    }
 
-
+    public function oneWith($key, $val){
+        return Service::where($key, $val)->first();
     }
 
 

@@ -19,4 +19,8 @@ class WsfRepository
 
         return $this->modify($query, $pagination);
     }
+
+    public function oneWith($key, $val){
+        return WsfOutline::where($key, $val)->first();
+    }
 }

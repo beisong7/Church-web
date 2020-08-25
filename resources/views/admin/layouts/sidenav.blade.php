@@ -12,8 +12,9 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main pb-3" id="main-menu-navigation" data-menu="menu-navigation">
             <li class="{{ @$sidenav['dashboard'] }} nav-item"><a href="{{ route('dashboard') }}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a></li>
-            <li class=" navigation-header"><span>Users</span></li>
+            <li class=" navigation-header"><span>Administration</span></li>
             <li class="{{ @$sidenav['admin'] }}  nav-item"><a href="{{ route('admin.index') }}"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Admins">Admins</span></a></li>
+            <li class="{{ @$sidenav['role'] }}  nav-item"><a href="{{ route('role.index') }}"><i class="feather icon-user-check"></i><span class="menu-title" data-i18n="Admins">Roles</span></a></li>
 
             <li class=" navigation-header"><span>Resource</span></li>
             <li class="{{ @$sidenav['wsf_outline'] }}  nav-item"><a href="{{ route('wsf.index') }}"><i class="fa fa-file-pdf-o"></i><span class="menu-title" data-i18n="WSF Outline">WSF Outline</span></a></li>

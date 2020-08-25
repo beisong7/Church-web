@@ -1,5 +1,5 @@
 <?php
-$sidenav['admin'] = 'active';
+$sidenav['role'] = 'active';
 $data_col = "content-detached-left-sidebar";
 $bd_class="content-detached-left-sidebar ecommerce-application";
 ?>
@@ -28,16 +28,16 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
         <div class="content-header-left col-md-12 col-12 mb-2">
             <div class="row breadcrumbs-top">
                 <div class="col-md-10 col-sm-12">
-                    <h2 class="content-header-title float-left mb-0">Admins</h2>
+                    <h2 class="content-header-title float-left mb-0">Role</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Admin</li>
+                            <li class="breadcrumb-item active">Role</li>
                         </ol>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-12 text-right">
-                    <a href="{{ route('admin.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>
+                    <a href="{{ route('role.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>
                 </div>
             </div>
         </div>
@@ -46,38 +46,43 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
         <!-- Data list view starts -->
         <section id="data-list-view" class="data-list-view-header">
 
+
             <div class="row">
                 <div class="col">
                     @include('layouts.notice')
                 </div>
             </div>
-
             <!-- DataTable starts -->
             <div class="table-responsive">
                 <table class="table data-list-view">
                     <thead>
                     <tr>
                         <th></th>
-                        <th>NAMES</th>
-                        <th>CREATED</th>
-                        <th>IMAGE</th>
+                        <th>ROLE NAME</th>
+                        <th>USERS</th>
                         <th>STATUS</th>
                         <th>ACTION</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($admins as $admin)
+                    @foreach($roles as $role)
                         <tr>
                             <td></td>
-                            <td class="product-name">{{ $admin->names }}</td>
-                            <td class="product-name">{{ $admin->created_at->diffForHumans() }}</td>
-                            <td class="product-category">
-                                <img src="{{ $admin->image }}" alt="" style="max-width: 80px">
-                            </td>
-                            <td class="product-category">{{ $admin->active?'Active':'Inactive' }}</td>
+                            <td class="product-category">{{ $role->name }}</td>
+                            <td class="product-category">{{ $role->users->count() }}</td>
+                            <td class="product-category">{{ $role->active?'Active':'Inactive' }}</td>
                             <td class="product-action">
-                                <a href="{{ route('admin.edit', $admin->uuid) }}" class="ml-2 text-white"><i class="feather icon-edit"></i></a>
-                                <span class="ml-2 action-delete" data-uuid="{{ $admin->uuid }}"><i class="feather icon-trash"></i></span>
+                                <a href="{{ route('role.toggle', $role->uuid) }}" class="ml-2 text-white">
+                                    @if($role->active)
+                                        <i title="Remove from Current" class="text-danger feather icon-cloud-lightning"></i>
+                                    @else
+                                        <i title="Set Current" class=" feather icon-upload"></i>
+                                    @endif
+                                </a>
+                                <a href="{{ route('role.edit', $role->uuid) }}" class="ml-2 text-white">
+                                    <i title="Start Edit" class=" feather icon-edit"></i>
+                                </a>
+                                <span title="Delete Immediately" class="ml-2 action-delete" data-uuid="{{ $role->uuid }}"><i class="feather icon-trash"></i></span>
                             </td>
                         </tr>
                     @endforeach
@@ -251,7 +256,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                 var dom = $(this);
                 var uuid = dom.data('uuid');
 //                console.log(uuid);
-                var route = '{{ route('admin.pop') }}'+'?uuid='+uuid;
+                var route = '{{ route('role.pop') }}'+'?uuid='+uuid;
                 $.ajax({
                     type:'GET',
                     url: route,

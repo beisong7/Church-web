@@ -36,7 +36,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.admin.create');
+        $roles = $this->adminServices->getActiveRoles();
+        return view('admin.pages.admin.create', compact('roles'));
     }
 
     /**
@@ -67,9 +68,15 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($uuid)
     {
-        //
+        $admin = $this->adminServices->oneWith('uuid', $uuid);
+        $roles = $this->adminServices->getActiveRoles();
+        return view('admin.pages.admin.edit')->with([
+            'roles'=>$roles,
+            'admin'=>$admin
+        ]);
+
     }
 
     /**
