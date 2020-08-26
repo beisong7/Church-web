@@ -30,7 +30,8 @@ class HomeController extends Controller
         $sliders = Slider::where('active', true)->get();
         $site = SiteSettings::first();
         $outline = WsfOutline::where('active', true)->where('current', true)->first();
-        $services = Service::where('date', '>=', time())->where('active', true)->orderBy('date', 'desc')->get();
+        $today = strtotime('today');
+        $services = Service::where('date', '>=', $today)->where('active', true)->orderBy('date', 'asc')->get();
         if(empty($site)){
             $site = new SiteSettings();
         }

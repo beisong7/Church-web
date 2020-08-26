@@ -60,8 +60,8 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                         <th></th>
                         <th>TITLE</th>
                         <th>THEME</th>
-                        <th>STARTS</th>
-                        <th>STATUS</th>
+                        <th>DATE</th>
+                        <th>ACTIVE</th>
                         <th>ACTION</th>
                     </tr>
                     </thead>
