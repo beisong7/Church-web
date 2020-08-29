@@ -59,7 +59,7 @@ Route::group(['middleware'=>'admin'], function () {
 
         //Services Routes
         Route::resource('service', 'Dashboard\ServiceController');
-        Route::get('delete-outline', 'Dashboard\ServiceController@delete')->name('service.pop');
+        Route::get('delete-service', 'Dashboard\ServiceController@delete')->name('service.pop');
         Route::get('service/toggle/{uuid}', 'Dashboard\ServiceController@toggleCurrent')->name('service.toggle');
 
         //Roles Routes
