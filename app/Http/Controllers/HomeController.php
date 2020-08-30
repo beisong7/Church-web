@@ -36,8 +36,13 @@ class HomeController extends Controller
             $site = new SiteSettings();
         }
         $slides = "";
-        foreach ($sliders as $slider){
-            $slides.= $slider->image->url."|";
+        foreach ($sliders as $key=>$slider){
+
+            if($slider->count() === $key+1){
+                $slides.= $slider->image->url;
+            }else{
+                $slides.= $slider->image->url."|";
+            }
         }
 //        return $slides;
         return view('pages.home')->with([

@@ -20,4 +20,4 @@
 <script src="{{ asset('vendor/app/youtubebackground/jquery.mb.YTPlayer.min.js') }}"></script>
 
 <!-- TEMPLATE COMMON SCRIPTS -->
-<script src="{{ asset('js/ckav-main.js') }}"></script>
+<script src="{{ asset('js/ckav-main.js')."?v=".@$ver }}"></script>

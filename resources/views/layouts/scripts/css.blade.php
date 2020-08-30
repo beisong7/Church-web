@@ -18,14 +18,14 @@
 <link rel="stylesheet" href="{{ asset('vendor/app/vegas/vegas.min.css') }}">
 
 <!-- TEMPLATE COMMON CSS -->
-<link rel="stylesheet" href="{{ asset('css/ckav-main.css') }}">
-<link rel="stylesheet" href="{{ asset('css/ckav-elements.css') }}">
-<link rel="stylesheet" href="{{ asset('css/ckav-helper.css') }}">
-<link rel="stylesheet" href="{{ asset('css/ckav-responsive.css') }}">
+<link rel="stylesheet" href="{{ asset('css/ckav-main.css')."?v=".@$ver }}">
+<link rel="stylesheet" href="{{ asset('css/ckav-elements.css')."?v=".@$ver }}">
+<link rel="stylesheet" href="{{ asset('css/ckav-helper.css')."?v=".@$ver }}">
+<link rel="stylesheet" href="{{ asset('css/ckav-responsive.css')."?v=".@$ver }}">
 
 <!-- DEMO SPECIFIC TEMPLATE CSS -->
 
 <!-- TEMPLATE THEME CSS -->
 
 <!-- TEMPLATE USER CUSTOM CSS -->
-<link rel="stylesheet" href="css/template-custom.css">
+<link rel="stylesheet" href="{{ asset('css/template-custom.css')."?v=".@$ver }}">

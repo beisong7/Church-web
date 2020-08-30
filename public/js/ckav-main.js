@@ -82,10 +82,10 @@ package_ver = 'v1.0';
 			});
 
 			element.vegas({
-				delay: 4000,
-				slides: bgslides,
-				timer: false,
-				animation: 'kenburns'
+                delay: 10000,
+                slides: bgslides,
+                timer: true,
+                animation: 'kenburns'
 			});
 		}
 	}
