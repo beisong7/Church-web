@@ -104,12 +104,12 @@
                     </tr>
                     <tr>
                         <td style="text-align:center;padding: 0 30px 20px">
-                            <p style="margin-bottom: 10px;">Hi {{ $data['name'] }},</p>
+                            <p style="margin-bottom: 10px;">Hi {{ $name }},</p>
                             <p style="margin-bottom: 25px;">You have been invited to be and admin on the Winners Durumi Web Portal. </p>
                             <p style="margin-bottom: 10px;">If you wish to accept this invite, click the button below.</p>
-                            <a href="{{ $data['link'] }}" style="background-color:#A70C17;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:600;line-height:44px;text-align:center;text-decoration:none;text-transform: uppercase; padding: 0 25px">Reset Password</a>
+                            <a href="{{ $link }}" style="background-color:#A70C17;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:600;line-height:44px;text-align:center;text-decoration:none;text-transform: uppercase; padding: 0 25px">Reset Password</a>
                             <p style="margin-bottom: 25px;">or use this link on a web browser.</p>
-                            <p style="margin-bottom: 10px;"><a href="{{ $data['link'] }}">{{ $data['link'] }}</a></p>
+                            <p style="margin-bottom: 10px;"><a href="{{ $link }}">{{ $link }}</a></p>
                         </td>
                     </tr>
                     <tr>
