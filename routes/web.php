@@ -13,6 +13,7 @@
 
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('test-name', 'AdminInviteController@test');
 
 
 Route::get('spirit-gate', 'Auth\LoginController@adminLogin')->name('admin.login');
