@@ -16,7 +16,7 @@ trait MailCart{
     public function prepAdminInvite($email, $name){
         $this->emailService->view = "email.admin_invite";
         $this->emailService->reciever = $email;
-        $this->emailService->sender = "noreply@winnersdurumi";
+        $this->emailService->sender = "noreply@winnersdurumi.org";
         $this->emailService->subject = "Winners Durumi Portal Invite";
         $this->emailService->title = "Winners Durumi";
         $this->emailService->receiverTitle = $name;

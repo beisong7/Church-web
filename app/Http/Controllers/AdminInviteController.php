@@ -13,6 +13,13 @@ class AdminInviteController extends Controller
     public function test(){
 //        $this->testName();
 
-        $this->prepAdminInvite("icekidben@gmail.com", "Benjamin");
+        try{
+            $this->prepAdminInvite("icekidben@gmail.com", "Benjamin");
+            return "Email sent";
+        }catch (\Exception $e){
+            return $e->getMessage();
+        }
+
+
     }
 }
