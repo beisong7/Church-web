@@ -13,7 +13,7 @@
 
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('test-name', 'AdminInviteController@test');
+Route::get('test-mail-invite', 'AdminInviteController@emailInviteTest');
 
 
 Route::get('spirit-gate', 'Auth\LoginController@adminLogin')->name('admin.login');
@@ -52,6 +52,8 @@ Route::group(['middleware'=>'admin'], function () {
         //Administrators (bundle)
         Route::resource('admin', 'Admin\AdminController');
         Route::get('disable-admin', 'Admin\AdminController@disable')->name('admin.pop');
+        Route::get('invite-new/admin', 'Admin\AdminController@startInvite')->name('admin.start.invite');
+        Route::post('invite-admin', 'Admin\AdminController@sendRoleInvite')->name('admin.invite');
 
         //WSF Routes
         Route::resource('wsf', 'Dashboard\WsfOutlineController');
@@ -67,6 +69,11 @@ Route::group(['middleware'=>'admin'], function () {
         Route::resource('role', 'Dashboard\RoleController');
         Route::get('delete-role', 'Dashboard\RoleController@delete')->name('role.pop');
         Route::get('role/toggle/{uuid}', 'Dashboard\RoleController@toggleCurrent')->name('role.toggle');
+        Route::get('profile/my-roles', 'Dashboard\RoleController@myRoles')->name('my.roles');
 
     });
 });
+
+//Admin External routes
+Route::get('accept/admin/{token}', 'AdminInviteController@startAccept')->name('admin.accept.invite');
+Route::get('action/failed', 'AdminInviteController@actionFailed')->name('action.failed');

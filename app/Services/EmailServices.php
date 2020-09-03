@@ -8,8 +8,6 @@
  */
 namespace App\Services;
 use App\Http\Controllers\Controller;
-use App\Repository\RoleRepository;
-use App\User;
 use Illuminate\Support\Facades\Mail;
 
 class EmailServices extends  Controller
@@ -32,10 +30,14 @@ class EmailServices extends  Controller
         $data = $this->data;
         $subject = $this->subject;
 
-        Mail::send($view, $data, function ($message) use ($from, $to, $title,$subject, $receiverTitle) {
-            $message->from($from, $title);
-            $message->to($to, $receiverTitle)->subject($subject);
-        });
+        try{
+            Mail::send($view, $data, function ($message) use ($from, $to, $title,$subject, $receiverTitle) {
+                $message->from($from, $title);
+                $message->to($to, $receiverTitle)->subject($subject);
+            });
+        }catch (\Exception $e){
+            //alternative email approach
+        }
     }
 
 }

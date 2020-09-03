@@ -116,4 +116,14 @@ class AdminController extends Controller
         }
         return response()->json(['message'=>'oops, cant find item - '.$uuid], 403);
     }
+
+    public function startInvite(){
+        return view('admin.pages.admin.invite')->with([
+            'roles'=>$this->adminServices->getActiveRoles(),
+        ]);
+    }
+
+    public function sendRoleInvite(Request $request){
+        return $this->adminServices->sendNewRoleInvite($request);
+    }
 }

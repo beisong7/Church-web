@@ -26,6 +26,5 @@ class AdminRepository
 
     public function oneWith($key, $val){
         return User::where($key, $val)->first();
-
     }
 }

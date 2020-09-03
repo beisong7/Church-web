@@ -27,7 +27,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
     <div class="content-header row">
         <div class="content-header-left col-md-12 col-12 mb-2">
             <div class="row breadcrumbs-top">
-                <div class="col-md-10 col-sm-12">
+                <div class="col-md-8 col-sm-12">
                     <h2 class="content-header-title float-left mb-0">Admins</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
@@ -36,7 +36,8 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                         </ol>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-12 text-right">
+                <div class="col-md-4 col-sm-12 text-right">
+                    <a href="{{ route('admin.start.invite') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Invite </a>
                     <a href="{{ route('admin.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>
                 </div>
             </div>

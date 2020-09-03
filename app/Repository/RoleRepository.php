@@ -29,8 +29,12 @@ class RoleRepository
         return $this->modify($query, $pagination, $selection, $order, null, $amount);
     }
 
-    public function oneWith($key, $val){
-        return Role::where($key, $val)->first();
+    public function oneWith($key, $val, $active = false){
+        $role = Role::where($key, $val)->first();
+        if($active){
+            return $role->active?$role:null;
+        }
+        return $role;
     }
 
 

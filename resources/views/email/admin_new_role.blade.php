@@ -90,7 +90,7 @@
                     <tr>
                         <td style="text-align: center; padding-bottom:25px">
                             <a href="#"><img style="height: 40px" src="{{ url('images/logo-black.png') }}" alt=""></a>
-                            <p style="font-size: 14px; color: #A70C17; padding-top: 12px;">Winners Durumi | Admin Invite</p>
+                            <p style="font-size: 14px; color: #A70C17; padding-top: 12px;">Winners Durumi | New Role Notice</p>
                         </td>
                     </tr>
                     </tbody>
@@ -99,29 +99,24 @@
                     <tbody>
                     <tr>
                         <td style="text-align:center;padding: 30px 30px 15px 30px;">
-                            <h2 style="font-size: 18px; color: #A70C17; font-weight: 600; margin: 0;">Admin Invitation</h2>
+                            <h2 style="font-size: 18px; color: #A70C17; font-weight: 600; margin: 0;">New Role Notice</h2>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:center;padding: 0 30px 20px">
-                            <p style="margin-bottom: 10px;">Hi {{ $name }},</p>
-                            <p style="margin-bottom: 25px;">You have been invited to be and admin on the Winners Durumi Web Portal
-                                @if(!empty($role))
-                                    <span style="margin-left: 5px">with the role : <b>{{ strtoupper($role)  }}</b></span>
-                                @endif
-                                . </p>
-                            <p style="margin-bottom: 10px;">If you wish to accept this invite, click the button below.</p>
-                            <a href="{{ $link }}" style="background-color:#A70C17;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:600;line-height:44px;text-align:center;text-decoration:none;text-transform: uppercase; padding: 0 25px">Accept Invite</a>
+                            <p style="margin-bottom: 10px;">Hurray {{ $name }}!</p>
+                            <p style="margin-bottom: 25px;">You now have access to the Admin role of <b>{{ $role }}</b>. </p>
+                            <p style="margin-bottom: 10px;">
+                                This gives you access to the permissions under this role. To see your permissions, click the button bellow.
+                            </p>
+
+                            <a href="{{ route('my.roles') }}" style="background-color:#A70C17;border-radius:4px;color:#ffffff;display:inline-block;font-size:13px;font-weight:600;line-height:44px;text-align:center;text-decoration:none;text-transform: uppercase; padding: 0 25px">View Permissions</a>
                             <p style="margin-bottom: 25px;">or use this link on a web browser.</p>
-                            <p style="margin-bottom: 25px;"><a href="{{ $link }}" style="color: #A70C17">{{ $link }}</a></p>
+                            <p style="margin-bottom: 25px;"><a href="{{ route('my.roles') }}" style="color: #A70C17">{{ route('my.roles') }}</a></p>
+
                         </td>
                     </tr>
-                    <tr>
-                        <td style="text-align:center;padding: 20px 30px 40px">
-                            <p>If you did not make accept this request, please ignore this email. The invite link expires after 56 hours if ignored.</p>
-                            <p style="margin: 0; font-size: 13px; line-height: 22px; color:rgba(191,0,1,0.55);">This is an automatically generated email please do not reply to this email. If you face any issues, please contact us at {{ env('SUP', 'dev@winnersdurumi.org') }}</p>
-                        </td>
-                    </tr>
+
                     </tbody>
                 </table>
                 <table style="width:100%;max-width:620px;margin:0 auto;">
@@ -135,7 +130,7 @@
                                 <li style="display: inline-block; list-style: none; padding: 4px;"><a style="display: inline-block; height: 30px; width:30px;border-radius: 50%; background-color: #ffffff" href="#"><img style="width: 30px" src="{{ url('images/brand-d.png') }}" alt=""></a></li>
                                 <li style="display: inline-block; list-style: none; padding: 4px;"><a style="display: inline-block; height: 30px; width:30px;border-radius: 50%; background-color: #ffffff" href="#"><img style="width: 30px" src="{{ url('images/brand-c.png') }}" alt=""></a></li>
                             </ul>
-                            <p style="padding-top: 15px; font-size: 12px;">This email was sent to you as an invited user of <a style="color: #A70C17; text-decoration:none;" href="{{ env('APP_URL', '') }}">{{ env('APP_NAME', '') }}</a>. To update your emails preferences <a style="color: #a70c17; text-decoration:none;" href="{{ env('APP_URL', '') }}">{{ env('APP_NAME', '') }}</a>.</p>
+                            <p style="padding-top: 15px; font-size: 12px;">This email was sent to you as because you are a user of <a style="color: #A70C17; text-decoration:none;" href="{{ env('APP_URL') }}">{{ env('APP_NAME', '') }}</a>. To update your emails preferences <a style="color: #a70c17; text-decoration:none;" href="{{ env('APP_URL', '') }}">{{ env('APP_NAME', '') }}</a>.</p>
                         </td>
                     </tr>
                     </tbody>
