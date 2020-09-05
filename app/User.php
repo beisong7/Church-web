@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Role;
+use App\Models\UserRoles;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -67,5 +69,9 @@ class User extends Authenticatable
         }else{
             return url('images/user.png');
         }
+    }
+
+    public function roles(){
+        return $this->hasManyThrough(Role::class, UserRoles::class, 'user_id', 'uuid', 'uuid', 'role_id');
     }
 }

@@ -16,6 +16,8 @@ $(document).ready(function() {
   var todayDate = new Date();
   var releaseDate = new Date(todayDate.setDate(todayDate.getDate()+5));
 
+  console.log(releaseDate);
+
   var dd = releaseDate.getDate();
   var mm = releaseDate.getMonth() + 1;
   var yy = releaseDate.getFullYear();

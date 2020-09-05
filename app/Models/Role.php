@@ -26,6 +26,6 @@ class Role extends Model
     ];
 
     public function users(){
-        return $this->hasMany(User::class, 'role_id', 'uuid');
+        return $this->hasManyThrough(User::class, UserRoles::class, 'role_id','uuid', 'uuid', 'user_id');
     }
 }

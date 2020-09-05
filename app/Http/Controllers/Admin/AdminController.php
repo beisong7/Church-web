@@ -124,6 +124,7 @@ class AdminController extends Controller
     }
 
     public function sendRoleInvite(Request $request){
+
         return $this->adminServices->sendNewRoleInvite($request);
     }
 }

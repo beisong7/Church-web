@@ -15,15 +15,16 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('test-mail-invite', 'AdminInviteController@emailInviteTest');
 
-
+//Auth route
 Route::get('spirit-gate', 'Auth\LoginController@adminLogin')->name('admin.login');
 Route::post('spirit-gate', 'Auth\LoginController@validateAdmin')->name('admin.auth');
+Route::get('spirit/reset_password', 'Auth\ForgotPasswordController@startPasswordReset')->name('admin.start.password_reset');
+
+//contact us post
 Route::post('contact-us', 'HomeController@contactUs')->name('contact.us');
+//wsf - download
 Route::get('download/wsf-outline/{uuid}', 'Dashboard\WsfOutlineController@download')->name('download.wsf.outline');
 
-
-
-Route::get('spirit/reset_password', 'Auth\ForgotPasswordController@startPasswordReset')->name('admin.start.password_reset');
 
 Route::group(['middleware'=>'admin'], function () {
     Route::prefix('dashboard')->group(function () {
@@ -70,10 +71,11 @@ Route::group(['middleware'=>'admin'], function () {
         Route::get('delete-role', 'Dashboard\RoleController@delete')->name('role.pop');
         Route::get('role/toggle/{uuid}', 'Dashboard\RoleController@toggleCurrent')->name('role.toggle');
         Route::get('profile/my-roles', 'Dashboard\RoleController@myRoles')->name('my.roles');
-
     });
 });
 
 //Admin External routes
 Route::get('accept/admin/{token}', 'AdminInviteController@startAccept')->name('admin.accept.invite');
+Route::post('accept/admin/{uuid}/complete', 'AdminInviteController@submitNewAdmin')->name('submit.admin.invite');
 Route::get('action/failed', 'AdminInviteController@actionFailed')->name('action.failed');
+Route::get('action/success', 'AdminInviteController@actionSuccess')->name('action.success');

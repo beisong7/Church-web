@@ -19,11 +19,14 @@ class AdminServices extends  AdminRepository
 {
     use Utility, MailCart;
     public function sendNewRoleInvite(Request $request){
+
+
         $validator = Validator::make($request->all(), [
             'email' => 'required',
             'name' => 'required|max:50',
-            'role' => 'required'
+            'role_id' => 'required'
         ]);
+
 
         if($validator->fails()){
             return back()->withErrors([$validator->messages()->first()]);

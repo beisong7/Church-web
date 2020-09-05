@@ -166,4 +166,8 @@ class RoleController extends Controller
         }
         return redirect()->route('role.index')->withErrors(['Resource not found']);
     }
+
+    public function myRoles(){
+        
+    }
 }

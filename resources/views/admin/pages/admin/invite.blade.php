@@ -51,13 +51,14 @@ $bd_class="2-columns";
 
                         </ul>
                         <div class="tab-content">
+
+                            @include('layouts.notice')
                             <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
                                 <!-- users edit media object start -->
 
 
                                 <form method="post" action="{{ route('admin.invite') }}" enctype="multipart/form-data">
                                     @csrf
-
 
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
@@ -79,8 +80,8 @@ $bd_class="2-columns";
 
 
                                             <div class="form-group">
-                                                <label>Role</label>
-                                                <select name="role_id" class="form-control" required>
+                                                <label for="role">Role</label>
+                                                <select id="role" name="role_id" class="form-control" required>
                                                     <option selected disabled>Select Role</option>
                                                     @foreach($roles as $role)
                                                         <option value="{{ $role->uuid }}">{{ $role->name }}</option>

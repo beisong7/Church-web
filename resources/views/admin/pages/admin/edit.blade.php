@@ -83,12 +83,6 @@ $bd_class="2-columns";
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <div class="controls">
-                                                    <label>Username</label>
-                                                    <input type="text" name="username" class="form-control" placeholder="Username" value="{{ $admin->username }}" required data-validation-required-message="This field is required">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="controls">
                                                     <label>First Name</label>
                                                     <input type="text" name="first_name" class="form-control" placeholder="First Name" value="{{ $admin->first_name }}" required data-validation-required-message="This  field is required">
                                                 </div>
@@ -104,19 +98,15 @@ $bd_class="2-columns";
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <div class="controls">
+                                                    <label>Username</label>
+                                                    <input type="text" name="username" class="form-control" placeholder="Username" value="{{ $admin->username }}" required data-validation-required-message="This field is required">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="controls">
                                                     <label>E-mail</label>
                                                     <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $admin->email }}" required data-validation-required-message="This email field is required">
                                                 </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Role</label>
-                                                <select class="form-control">
-                                                    <option selected disabled>Select Role</option>
-                                                    @foreach($roles as $role)
-                                                        <option value="{{ $role->uuid }}" {{ $admin->role_id===$role->uuid?'selected':'' }}>{{ $role->name }}</option>
-                                                    @endforeach
-                                                </select>
                                             </div>
 
                                         </div>
