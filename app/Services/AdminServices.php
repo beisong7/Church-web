@@ -56,7 +56,7 @@ class AdminServices extends  AdminRepository
             $invite->save();
 
             //send email
-            $this->prepAdminInvite($email, $name, $uuid, $role_name);
+            $this->prepAdminInvite($email, $name, $token, $role_name);
 
             return back()->withMessage("Your invite for a new role ($role_name) has been sent to $email");
         }

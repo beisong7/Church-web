@@ -53,6 +53,8 @@ Route::group(['middleware'=>'admin'], function () {
         //Administrators (bundle)
         Route::resource('admin', 'Admin\AdminController');
         Route::get('disable-admin', 'Admin\AdminController@disable')->name('admin.pop');
+
+        //Admin Invite
         Route::get('invite-new/admin', 'Admin\AdminController@startInvite')->name('admin.start.invite');
         Route::post('invite-admin', 'Admin\AdminController@sendRoleInvite')->name('admin.invite');
 

@@ -13,7 +13,7 @@ trait MailCart{
         $this->emailService = $services;
     }
 
-    public function prepAdminInvite($email, $name, $uuid=null, $role_name = null){
+    public function prepAdminInvite($email, $name, $token=null, $role_name = null){
         $this->emailService->view = "email.admin_invite";
         $this->emailService->reciever = $email;
         $this->emailService->sender = "noreply@winnersdurumi.org";
@@ -21,7 +21,7 @@ trait MailCart{
         $this->emailService->title = "Winners Durumi";
         $this->emailService->receiverTitle = $name;
         $data = [
-            "link" => !empty($uuid)?route('admin.accept.invite', $uuid):"#",
+            "link" => !empty($token)?route('admin.accept.invite', $token):"#",
             "name" => $name,
             "role" => !empty($role_name)?$role_name:null
         ];
