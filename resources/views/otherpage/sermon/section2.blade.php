@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <ul class="slider slider-zoom-center" data-options="type:carousel,perView:3,perViewSm:1,focusAt:center,gap:0,nav:true,controls:out,autoplay:3000">
-                    @foreach($sermons as $sermon)
+                    @forelse($sermons as $sermon)
                         <li>
                             <a href="#" class="media-box media-box-full light align-left">
                                 <img src="{{ url($sermon->preacher->image) }}" alt="" style="max-height: 200px; width: 100%" />
@@ -30,7 +30,17 @@
                                 </div>
                             </a>
                         </li>
-                    @endforeach
+                    @empty
+                        <li>
+                            <a href="#" class="media-box media-box-full light align-left">
+                                <img src="{{ url('images/sermon_mini_bg.jpg') }}" alt="" />
+                                <div class="caption">
+                                    <h2>Winners Durumi</h2>
+                                    <div class="extra-field">Teachings will be available shortly</div>
+                                </div>
+                            </a>
+                        </li>
+                    @endforelse
                 </ul>
             </div>
             <div class="col-lg-5">
