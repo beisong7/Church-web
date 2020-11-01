@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::where('active', true)->get();
+        $sliders = Slider::orderBy('id', 'desc')->where('active', true)->get();
         $site = SiteSettings::first();
         $outline = WsfOutline::where('active', true)->where('current', true)->first();
         $today = strtotime('today');

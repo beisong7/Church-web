@@ -1,0 +1,3 @@
+.accordion-list > li > a:before, .cnt-box-badge .badge, .cnt-box-blog-side .blog-date, .cnt-box-blog-top .blog-date, .cnt-box-top .extra-field, .media-box-half .extra-field {
+    background-color: rgb(18 48 74 / 63%);
+}

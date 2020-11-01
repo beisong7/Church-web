@@ -24,8 +24,6 @@
     <!-- WEB FONT-FAMILY -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
-
-
     @yield('vendor_css')
     @include('admin.layouts.scripts.css')
     @yield('custom_css')

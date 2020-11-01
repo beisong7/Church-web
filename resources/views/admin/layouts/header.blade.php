@@ -20,6 +20,7 @@
                 <ul class="nav navbar-nav float-right">
 
                     <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
+                    {{--
                     <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
                         <div class="search-input">
                             <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
@@ -28,7 +29,7 @@
                             <ul class="search-list search-list-main"></ul>
                         </div>
                     </li>
-
+                    --}}
                     <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i>
                             @if(!empty($noticeCount))
                                 <span class="badge badge-pill badge-primary badge-up">{{ $noticeCount }}</span>
@@ -47,7 +48,7 @@
                     </li>
 
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                            <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{ $person->first_name }}</span><span class="user-status">Admin</span></div>
+                            <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{ $person->first_name }}</span></div>
                             <span><img class="round" src="{{ $person->image }}" alt="avatar" height="40" width="40"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">

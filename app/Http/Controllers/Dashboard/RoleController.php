@@ -31,7 +31,6 @@ class RoleController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -105,11 +104,34 @@ class RoleController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Role  $Role
-     * @return \Illuminate\Http\Response
      */
-    public function edit(Role $Role)
+    public function edit($uuid)
     {
-        //
+        $role = Role::whereUuid($uuid)->first();
+        if(!empty($role)){
+            $list1 = [
+                'modify_users',
+                'modify_roles',
+                'modify_wsf_outline',
+                'modify_pages',
+                'modify_sermons',
+                'modify_service',
+            ];
+            $list2 = [
+                'modify_site_info',
+                'modify_sliders',
+                'modify_testimony',
+                'modify_files',
+                'modify_unique',
+            ];
+            return view('admin.pages.role.edit')->with([
+                'role'=>$role,
+                'list1'=>$list1,
+                'list2'=>$list2,
+            ]);
+        }
+
+        return redirect()->route('role.index');
     }
 
     /**
@@ -119,9 +141,32 @@ class RoleController extends Controller
      * @param  \App\Models\Role  $Role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $Role)
+    public function update(Request $request, $uuid)
     {
         //
+
+        $role = Role::whereUuid($uuid)->first();
+
+        if(!empty($role)){
+
+            $role->name = $request->input('name');
+            $role->modify_users = $request->input('modify_users')==='on'?true:false;
+            $role->modify_roles = $request->input('modify_roles')==='on'?true:false;
+            $role->modify_wsf_outline = $request->input('modify_wsf_outline')==='on'?true:false;
+            $role->modify_pages = $request->input('modify_pages')==='on'?true:false;
+            $role->modify_sermons = $request->input('modify_sermons')==='on'?true:false;
+            $role->modify_service = $request->input('modify_service')==='on'?true:false;
+            $role->modify_site_info = $request->input('modify_site_info')==='on'?true:false;
+            $role->modify_sliders = $request->input('modify_sliders')==='on'?true:false;
+            $role->modify_testimony = $request->input('modify_testimony')==='on'?true:false;
+            $role->modify_files = $request->input('modify_files')==='on'?true:false;
+            $role->modify_unique = $request->input('modify_unique')==='on'?true:false;
+            $role->update();
+
+            return back()->withMessage('Role updated successfully');
+
+        }
+        return back()->withErrors(['Resource not found']);
     }
 
     /**

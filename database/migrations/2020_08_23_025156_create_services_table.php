@@ -18,8 +18,8 @@ class CreateServicesTable extends Migration
             $table->uuid('uuid')->nullable();
             $table->string('title')->nullable(); //sunday service, midweek service,
             $table->string('theme')->nullable(); //example: Encounter with destiny...
-            $table->boolean('sub_title')->nullable(); //fasting and prayer , anointing service
-            $table->boolean('instruction')->nullable(); //come with your anointing oil
+            $table->string('sub_title')->nullable(); //fasting and prayer , anointing service
+            $table->string('instruction')->nullable(); //come with your anointing oil
             $table->string('service_time')->nullable(); //  | 9:30 AM
             $table->string('service_link')->nullable();
             $table->bigInteger('date')->nullable();

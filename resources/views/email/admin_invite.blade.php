@@ -107,7 +107,8 @@
                             <p style="margin-bottom: 10px;">Hi {{ $name }},</p>
                             <p style="margin-bottom: 25px;">You have been invited to be and admin on the Winners Durumi Web Portal
                                 @if(!empty($role))
-                                    <span style="margin-left: 5px">with the role : <b>{{ strtoupper($role)  }}</b></span>
+                                    <br>
+                                    <span style="margin-left: 5px"> with the role : <b>{{ strtoupper($role)  }}</b></span>
                                 @endif
                                 . </p>
                             <p style="margin-bottom: 10px;">If you wish to accept this invite, click the button below.</p>

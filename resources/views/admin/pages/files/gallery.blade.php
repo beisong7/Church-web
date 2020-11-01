@@ -96,7 +96,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                                     @if($model==='slider')
                                         <div class="wishlist">
                                             <i class="fa fa-info-circle"></i> <span>
-                                                {{ $file->sized }}MB
+                                                {{ $file->sized }}
                                             </span>
                                         </div>
                                         <div class="cart">

@@ -11,6 +11,10 @@
 |
 */
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('test-mail-invite', 'AdminInviteController@emailInviteTest');
@@ -68,11 +72,21 @@ Route::group(['middleware'=>'admin'], function () {
         Route::get('delete-service', 'Dashboard\ServiceController@delete')->name('service.pop');
         Route::get('service/toggle/{uuid}', 'Dashboard\ServiceController@toggleCurrent')->name('service.toggle');
 
+        //Sermons Routes
+        Route::resource('sermon', 'Dashboard\SermonsController');
+        Route::get('delete-sermon', 'Dashboard\SermonsController@delete')->name('sermon.pop');
+        Route::get('sermon/toggle/{uuid}', 'Dashboard\SermonsController@toggleCurrent')->name('sermon.toggle');
+
         //Roles Routes
         Route::resource('role', 'Dashboard\RoleController');
         Route::get('delete-role', 'Dashboard\RoleController@delete')->name('role.pop');
-        Route::get('role/toggle/{uuid}', 'Dashboard\RoleController@toggleCurrent')->name('role.toggle');
+        Route::get('toggle/role/{uuid}', 'Dashboard\RoleController@toggleCurrent')->name('role.toggle');
         Route::get('profile/my-roles', 'Dashboard\RoleController@myRoles')->name('my.roles');
+
+        //Preacher Routes
+        Route::resource('preacher', 'Dashboard\PreacherController');
+        Route::get('toggle/preacher/{uuid}', 'Dashboard\PreacherController@toggleCurrent')->name('preacher.toggle');
+        Route::get('delete-preacher', 'Dashboard\PreacherController@delete')->name('preacher.pop');
     });
 });
 
@@ -81,3 +95,6 @@ Route::get('accept/admin/{token}', 'AdminInviteController@startAccept')->name('a
 Route::post('accept/admin/{uuid}/complete', 'AdminInviteController@submitNewAdmin')->name('submit.admin.invite');
 Route::get('action/failed', 'AdminInviteController@actionFailed')->name('action.failed');
 Route::get('action/success', 'AdminInviteController@actionSuccess')->name('action.success');
+
+//other page routes
+Route::get('sermons', 'SermonController@index')->name('sermon.list');

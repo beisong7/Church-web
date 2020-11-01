@@ -8,8 +8,8 @@
 
         <!-- LOGO -->
         <div class="logo-wrp flex-lc">
-            <a href="#" class="logo-link width-px-80" data-ckav-smd="width-px-60">
-                <img src="images/logo.png" alt="logo">
+            <a href="{{ route('sermon.list') }}" class="logo-link width-px-80" data-ckav-smd="width-px-60">
+                <img src="/images/logo.png" alt="logo">
             </a>
         </div>
 

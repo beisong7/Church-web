@@ -38,6 +38,7 @@ $bd_class="2-columns";
     </div>
     <div class="content-body">
         <section class="users-edit">
+            @include('layouts.notice')
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">

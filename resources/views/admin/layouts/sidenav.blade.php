@@ -19,7 +19,8 @@
             <li class=" navigation-header"><span>Resource</span></li>
             <li class="{{ @$sidenav['wsf_outline'] }}  nav-item"><a href="{{ route('wsf.index') }}"><i class="fa fa-file-pdf-o"></i><span class="menu-title" data-i18n="WSF Outline">WSF Outline</span></a></li>
             <li class="{{ @$sidenav['pages'] }}  nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Pages">Pages</span></a></li>
-            <li class="{{ @$sidenav['sermons'] }}  nav-item"><a href="#"><i class="feather icon-plus-circle"></i><span class="menu-title" data-i18n="Sermons">Sermons</span></a></li>
+            <li class="{{ @$sidenav['preacher'] }}  nav-item"><a href="{{ route('preacher.index') }}"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Pages">Preacher</span></a></li>
+            <li class="{{ @$sidenav['sermon'] }}  nav-item"><a href="{{ route('sermon.index') }}"><i class="feather icon-plus-circle"></i><span class="menu-title" data-i18n="Sermons">Sermons</span></a></li>
             <li class="{{ @$sidenav['service'] }}  nav-item"><a href="{{ route('service.index') }}"><i class="feather icon-cloud"></i><span class="menu-title" data-i18n="Testimony">Services</span></a></li>
             <li class="{{ @$sidenav['site_info'] }}  nav-item"><a href="{{ route('site.info') }}"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Site Info">Site Info</span></a></li>
             <li class="{{ @$sidenav['slider'] }}  nav-item"><a href="{{ route('sliders') }}"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="Slider">Slider</span></a></li>

@@ -28,6 +28,7 @@
                     <p class="margin-b-20 animated" data-anim-in="fadeInUp|0.2">
                         {{ $site->about_extra }}
                     </p>
+                    <p class="animated" data-anim-in="fadeInUp|0.3"><a style="text-decoration: none; color: #fff" href="{{ route('sermon.list') }}">Know More!</a></p>
                     <!--
                     <ul class="list-1 color-text-white font-01" data-ckav-smd="align-left margin-b-30">
                         <li class="margin-b-5 animated" data-anim-in="fadeInUp|0.3"><i class="list-bullet margin-r-10 color-text-default fas fa-angle-right"></i> Lorem ipsum dolor sit amet consectetur.</li>
