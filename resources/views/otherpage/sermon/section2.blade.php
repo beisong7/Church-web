@@ -23,7 +23,7 @@
                     @forelse($sermons as $sermon)
                         <li>
                             <a href="#" class="media-box media-box-full light align-left">
-                                <img src="{{ url($sermon->preacher->image) }}" alt="" style="max-height: 200px; width: 100%" />
+                                <img src="{{ $sermon->preacher->photo }}" alt="" style="max-height: 200px; width: 100%" />
                                 <div class="caption">
                                     <h2>{{ $sermon->preacher->fullname }}</h2>
                                     <div class="extra-field">{{ $sermon->title }}</div>
@@ -33,7 +33,7 @@
                     @empty
                         <li>
                             <a href="#" class="media-box media-box-full light align-left">
-                                <img src="{{ url('images/sermon_mini_bg.jpg') }}" alt="" />
+                                <img src="{{ url('images/placeholder.jpg') }}" alt="" />
                                 <div class="caption">
                                     <h2>Winners Durumi</h2>
                                     <div class="extra-field">Teachings will be available shortly</div>

@@ -103,7 +103,7 @@ $bd_class="2-columns";
                                             </div>
                                             <div class="form-group">
                                                 <div class="p-1">
-                                                    <img class="img-thumbnail" id="imgtoshow" src="{{ !empty($preacher->image)?url($preacher->image):'' }}" alt="" style="width: 30%; max-height: 200px">
+                                                    <img class="img-thumbnail" id="imgtoshow" src="{{ $preacher->photo }}" alt="" style="width: 30%; max-height: 200px">
                                                 </div>
                                             </div>
                                         </div>
