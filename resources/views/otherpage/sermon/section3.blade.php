@@ -27,7 +27,7 @@
                                         <ul class="icon-list icon-list-horizontal">
                                             <li><i class="icon-bookmark"></i><a href="#">SERMON</a></li>
                                         </ul>
-                                        <p>{{ $sermon->intro }}</p>
+                                        <p>{{ $sermon->introduction }}</p>
                                     </div>
                                 </div>
                             </div>

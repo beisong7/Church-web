@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Sermons extends Model
 {
@@ -30,5 +31,9 @@ class Sermons extends Model
 
     public function preacher(){
         return $this->hasOne(Preacher::class, 'uuid', 'preacher_id');
+    }
+
+    public function getIntroductionAttribute(){
+        return Str::words($this->intro, 18, '...');
     }
 }
