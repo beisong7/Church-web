@@ -20,7 +20,7 @@
                                             <span>{{ date('d', $sermon->date) }}</span>
                                             <span>{{ date('M Y', $sermon->date) }}</span>
                                         </div>
-                                        <img src="{{ url($sermon->preacher->image) }}" alt="" />
+                                        <img src="{{ $sermon->preacher->photo }}" alt="" />
                                     </a>
                                     <div class="caption">
                                         <h2>{{ $sermon->title }}</h2>
