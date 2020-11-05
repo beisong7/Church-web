@@ -38,6 +38,7 @@ $bd_class="2-columns";
     </div>
     <div class="content-body">
         <section class="users-edit">
+            @include('layouts.notice')
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
@@ -93,7 +94,7 @@ $bd_class="2-columns";
 
                                         <div class="col-lg-6 col-md-12">
                                             <div class="form-group">
-                                                <label for="basicInputFile">With Browse button</label>
+                                                <label for="basicInputFile">Image (800 x 600) Required</label>
                                                 <div class="custom-file">
                                                     <input type="file" class="custom-file-input" id="imgInp" name="image" value="{{ old('image') }}" accept="image/*" onchange="shwimg()">
                                                     <label class="custom-file-label" for="inputGroupFile01">Image file only</label>

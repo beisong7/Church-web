@@ -4,10 +4,12 @@ namespace App\Traits\Image;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 
 trait ImageTrait {
 
-    public function uploadImage($photo){
+
+    public function uploadImage($photo, $dimensions = null){
 
 
         $allowedfileExtension = ['jpg', 'png', 'bmp', 'jpeg'];
@@ -20,6 +22,22 @@ trait ImageTrait {
 
         if ($size > 600000) {
             return [false, 'Your passport must be of types : jpeg,bmp,png,jpg.'];
+        }
+
+        if($dimensions!==null){
+            try{
+                $height = Image::make($photo)->height();
+                $width = Image::make($photo)->width();
+                if($width!==$dimensions[0]){
+                    return [false, 'Image width does not meet Specifications'];
+                }
+
+                if($height!==$dimensions[1]){
+                    return [false, 'Image Heifht does not meet Specifications'];
+                }
+            }catch (\Exception $e){
+
+            }
         }
 
         $time = Carbon::now();

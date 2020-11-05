@@ -65,7 +65,7 @@ class PreacherController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $resp = $this->uploadImage($request->file('image'));
+            $resp = $this->uploadImage($request->file('image'), [800, 600]);
             if($resp[0]){
                 $data['image'] = $resp[1];
             }else{
@@ -136,7 +136,7 @@ class PreacherController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $resp = $this->uploadImage($request->file('image'));
+            $resp = $this->uploadImage($request->file('image'), [800, 600]);
             if($resp[0]){
                 $data['image'] = $resp[1];
                 //try unsetting image

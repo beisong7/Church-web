@@ -60,7 +60,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                         <th></th>
                         <th>TITLE</th>
                         <th>LAST UPDATE</th>
-                        <th>ACTIVE</th>
+                        <th>PUBLISHED</th>
                         <th>ACTION</th>
                     </tr>
                     </thead>
@@ -70,7 +70,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                             <td></td>
                             <td class="product-category">{{ $sermon->title }}</td>
                             <td class="product-category">{{ date('F d, Y', strtotime($sermon->updated_at)) }}</td>
-                            <td class="product-category">{{ $sermon->active?'Yes':'No' }}</td>
+                            <td class="product-category">{{ $sermon->published?'Yes':'No' }}</td>
                             <td class="product-action">
                                 <a href="{{ route('sermon.toggle', $sermon->uuid) }}" class="ml-2 text-white">
                                     @if($sermon->published)
