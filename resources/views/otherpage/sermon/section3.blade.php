@@ -23,9 +23,9 @@
                                         <img src="{{ $sermon->preacher->photo }}" alt="" />
                                     </a>
                                     <div class="caption">
-                                        <h2>{{ $sermon->title }}</h2>
+                                        <h2><a href="#" style="color: #3E566B; text-decoration: none;">{{ $sermon->title }}</a></h2>
                                         <ul class="icon-list icon-list-horizontal">
-                                            <li><i class="icon-bookmark"></i><a href="#">SERMON</a></li>
+                                            <li><i class="icon-bookmark"></i><a href="#">{{ $sermon->preacher->fullname }}</a></li>
                                         </ul>
                                         <p>{{ $sermon->introduction }}</p>
                                     </div>

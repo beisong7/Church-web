@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="433f0712-5115-446e-a240-542f37722f82" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Sermons.php" afterPath="$PROJECT_DIR$/app/Models/Sermons.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" afterPath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,12 +70,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="section3.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="section3.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="329">
+              <caret line="25" column="101" lean-forward="false" selection-start-line="25" selection-start-column="101" selection-end-line="25" selection-end-column="101" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,7 +85,7 @@
       <file leaf-file-name="section2.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section2.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="-85">
               <caret line="30" column="32" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="30" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
@@ -113,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sermons.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sermons.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Sermons.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="388">
@@ -240,9 +241,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/pages/preacher/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/preacher/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/section2.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
         <option value="$PROJECT_DIR$/app/Services/SermonServices.php" />
         <option value="$PROJECT_DIR$/app/Models/Sermons.php" />
+        <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
       </list>
     </option>
   </component>
@@ -678,12 +679,12 @@
       <workItem from="1603190340029" duration="4049000" />
       <workItem from="1603609866497" duration="4389000" />
       <workItem from="1604217006753" duration="18074000" />
-      <workItem from="1604532771449" duration="3634000" />
+      <workItem from="1604532771449" duration="4007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242563000" />
+    <option name="totallyTimeSpent" value="242936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -1089,16 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1113,14 +1104,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -1147,6 +1130,26 @@
           <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding>
             <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="25" column="101" lean-forward="false" selection-start-line="25" selection-start-column="101" selection-end-line="25" selection-end-column="101" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
