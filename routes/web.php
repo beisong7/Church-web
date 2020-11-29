@@ -98,3 +98,4 @@ Route::get('action/success', 'AdminInviteController@actionSuccess')->name('actio
 
 //other page routes
 Route::get('sermons', 'SermonController@index')->name('sermon.list');
+Route::get('sermon/read/{id}', 'SermonController@readNow')->name('read.sermon');

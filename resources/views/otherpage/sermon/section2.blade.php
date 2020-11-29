@@ -22,7 +22,7 @@
                 <ul class="slider slider-zoom-center" data-options="type:carousel,perView:3,perViewSm:1,focusAt:center,gap:0,nav:true,controls:out,autoplay:3000">
                     @forelse($sermons as $sermon)
                         <li>
-                            <a href="#" class="media-box media-box-full light align-left">
+                            <a href="{{ route('read.sermon', $sermon->uuid) }}" class="media-box media-box-full light align-left">
                                 <img src="{{ $sermon->preacher->photo }}" alt="" style="max-height: 200px; width: 100%" />
                                 <div class="caption">
                                     <h2>{{ $sermon->preacher->fullname }}</h2>

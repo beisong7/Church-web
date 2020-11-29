@@ -19,7 +19,7 @@
                 <hr class="space-xs" />
             </div>
             <div class="col-lg-6" data-anima="fade-bottom" data-time="1000">
-                <img src="/images/about-us.jpg" alt="" />
+                <img src="{{ url('images/about-us.jpg') }}" alt="" />
             </div>
         </div>
     </div>

@@ -90,4 +90,20 @@ class SermonController extends Controller
     {
         //
     }
+
+    public function readNow(Request $request, $uuid){
+        $sermon = Sermons::whereUuid($uuid)->first();
+        $sermons = Sermons::orderBy('date', 'desc')->where('uuid', '!=',$uuid)->where('published', true)->take(5)->get();
+
+        $sermon->increment('hits', 1);
+        if(!empty($sermon)){
+            return view('otherpage.sermon.read')->with(
+                [
+                    'sermon'=>$sermon,
+                    'sermons'=>$sermons,
+                ]
+            );
+        }
+        return back();
+    }
 }
