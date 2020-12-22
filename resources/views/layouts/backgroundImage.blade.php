@@ -1,1 +1,1 @@
-<b data-bgholder="slideshow" class="full-wh bg-cover bg-cc zindex-1" data-slide-image="{{ $slides }}"></b> <!-- images/slider-01.jpg|images/winners-bg.jpg|images/slider-03.jpg -->
+<b data-bgholder="{{ @$season==='christmas'?'background-image':'slideshow' }}" class="full-wh bg-cover bg-cc zindex-1" data-slide-image="{{ $slides }}" data-bg-image="{{ $slides }}"></b>

@@ -26,7 +26,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
     @include('layouts.scripts.css')
 </head>
-<body class="ckav-body tooltip-light">
+
+@if(@$season==='christmas')
+    <body class="ckav-body tooltip-light" onload="init()">
+@else
+    <body class="ckav-body tooltip-light">
+@endif
+
 
 <div id="loader">
     <div class="load-three-bounce">

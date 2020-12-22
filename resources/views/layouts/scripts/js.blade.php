@@ -16,8 +16,16 @@
 <script src="{{ asset('vendor/app/isotope/packery-mode.pkgd.min.js') }}"></script>
 
 <!-- PAGE SPECIFIC VENDOR SCRIPTS -->
-<script src="{{ asset('vendor/app/vegas/vegas.min.js') }}"></script>
-<script src="{{ asset('vendor/app/youtubebackground/jquery.mb.YTPlayer.min.js') }}"></script>
+
+
+@if(@$season==='christmas')
+    <script src="{{ asset('vendor/app/snow3d/ThreeCanvas.js') }}"></script>
+    <script src="{{ asset('vendor/app/snow3d/Snow.js') }}"></script>
+    <script src="{{ asset('vendor/app/snow3d/snow-effect.js') }}"></script>
+@else
+    <script src="{{ asset('vendor/app/vegas/vegas.min.js') }}"></script>
+    <script src="{{ asset('vendor/app/youtubebackground/jquery.mb.YTPlayer.min.js') }}"></script>
+@endif
 
 <!-- TEMPLATE COMMON SCRIPTS -->
 <script src="{{ asset('js/ckav-main.js')."?v=".@$ver }}"></script>

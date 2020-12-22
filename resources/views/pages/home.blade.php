@@ -1,3 +1,6 @@
+<?php
+$season = 'christmas';
+?>
 @extends('layouts.app')
 
 @section('content')
@@ -33,8 +36,16 @@
             <!-- OVERLAY -->
             <b data-bgholder="overlay" class="full-wh zindex-2" data-radial-gradient="rgba(0,0,0, 0)|rgba(0,0,0, 0.5)"></b>
 
-            <!-- BACKGROUND IMAGE -->
+            @if(@$season==='christmas')
+                <!-- SNOW ANIMATION -->
+                    <div id="snow-wrp" class="full-wh zindex-2"></div>
+            @endif
+
+        <!-- BACKGROUND IMAGE -->
             @include('layouts.backgroundImage')
+
+
+
 
         </div>
         <!-- ======= END : BACKGROUND HOLDER =======  -->

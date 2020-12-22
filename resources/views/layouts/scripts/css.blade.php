@@ -14,8 +14,13 @@
 <link rel="stylesheet" href="{{ asset('vendor/app/magnific-popup/magnific-popup.css') }}">
 
 <!-- PAGE SPECIFIC VENDOR CSS -->
-<link rel="stylesheet" href="{{ asset('vendor/app/youtubebackground/css/jquery.mb.YTPlayer.min.css') }}">
-<link rel="stylesheet" href="{{ asset('vendor/app/vegas/vegas.min.css') }}">
+@if(@$season==='christmas')
+    <link rel="stylesheet" href="{{ asset('vendor/app/snow3d/snow-effect.css') }}">
+@else
+    <link rel="stylesheet" href="{{ asset('vendor/app/youtubebackground/css/jquery.mb.YTPlayer.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/app/vegas/vegas.min.css') }}">
+@endif
+
 
 <!-- TEMPLATE COMMON CSS -->
 <link rel="stylesheet" href="{{ asset('css/ckav-main.css')."?v=".@$ver }}">

@@ -104,7 +104,7 @@
                             @forelse($sermons as $item)
                                 <li>
                                     <a href="#">
-                                        <img src="http://via.placeholder.com/400x400" alt="" style="width: 80px" />
+                                        <img src="{{ $item->preacher->photo }}" alt="" style="width: 80px" />
                                         <span>{{ date('d M Y', $item->date) }}</span>
                                         {{ $item->title }}
                                     </a>
