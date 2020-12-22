@@ -177,6 +177,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
             <!-- Ecommerce Products Ends -->
 
             <!-- Ecommerce Pagination Starts -->
+            {{--
             <section id="ecommerce-pagination">
                 <div class="row">
                     <div class="col-sm-12">
@@ -196,6 +197,8 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                     </div>
                 </div>
             </section>
+            --}}
+            {{ $files->links() }}
             <!-- Ecommerce Pagination Ends -->
 
         </div>
