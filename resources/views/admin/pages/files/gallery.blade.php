@@ -198,7 +198,8 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                 </div>
             </section>
             --}}
-            {{ $files->links() }}
+{{--            {{ $files->links() }}--}}
+            {{ $files->appends(request()->input())->links() }}
             <!-- Ecommerce Pagination Ends -->
 
         </div>

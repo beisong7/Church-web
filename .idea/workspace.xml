@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="433f0712-5115-446e-a240-542f37722f82" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pages/files/gallery.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pages/files/gallery.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,10 +48,10 @@
       <file leaf-file-name="gallery.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/files/gallery.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="200" column="29" lean-forward="false" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="29" />
+            <state relative-caret-position="317">
+              <caret line="200" column="25" lean-forward="false" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="25" />
               <folding>
-                <marker date="1608613677408" expanded="false" signature="9756:11019" ph="..." />
+                <marker date="1608613811485" expanded="false" signature="9756:11019" ph="..." />
               </folding>
             </state>
           </provider>
@@ -686,12 +687,12 @@
       <workItem from="1607788290391" duration="1211000" />
       <workItem from="1607888349404" duration="633000" />
       <workItem from="1607946057626" duration="1679000" />
-      <workItem from="1608610124937" duration="3065000" />
+      <workItem from="1608610124937" duration="3205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261274000" />
+    <option name="totallyTimeSpent" value="261414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -1130,10 +1131,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/files/gallery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="200" column="29" lean-forward="false" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="29" />
+        <state relative-caret-position="317">
+          <caret line="200" column="25" lean-forward="false" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="25" />
           <folding>
-            <marker date="1608613677408" expanded="false" signature="9756:11019" ph="..." />
+            <marker date="1608613811485" expanded="false" signature="9756:11019" ph="..." />
           </folding>
         </state>
       </provider>
