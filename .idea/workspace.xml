@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="433f0712-5115-446e-a240-542f37722f82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pages/files/item.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pages/media/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pages/media/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pages/media/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pages/media/item.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pages/media/manage_resource.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pages/media/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/otherpage/media/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/otherpage/media/section1.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/otherpage/media/section2.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/otherpage/media/section3.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/GalleryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/GalleryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Sermons.php" afterPath="$PROJECT_DIR$/app/Models/Sermons.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/layouts/sidenav.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/sidenav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pages/files/gallery.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pages/files/gallery.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pages/slider/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pages/slider/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/otherpage/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/otherpage/navbar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" afterPath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" afterPath="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,14 +57,14 @@
       <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="26" column="89" lean-forward="false" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+            <state relative-caret-position="102">
+              <caret line="25" column="85" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
               <folding>
                 <element signature="e#402#423#0#HTML" expanded="true" />
                 <element signature="e#447#471#0#HTML" expanded="true" />
                 <element signature="e#512#536#0#HTML" expanded="true" />
                 <element signature="e#588#608#0#HTML" expanded="true" />
-                <marker date="1609860492966" expanded="false" signature="1847:3090" ph="..." />
+                <marker date="1609861207073" expanded="false" signature="1879:3122" ph="..." />
               </folding>
             </state>
           </provider>
@@ -706,12 +685,12 @@
       <workItem from="1607888349404" duration="633000" />
       <workItem from="1607946057626" duration="1679000" />
       <workItem from="1608610124937" duration="3859000" />
-      <workItem from="1609788535961" duration="21424000" />
+      <workItem from="1609788535961" duration="22131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283492000" />
+    <option name="totallyTimeSpent" value="284199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1456" height="886" extended-state="6" />
@@ -1195,14 +1174,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="26" column="89" lean-forward="false" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+        <state relative-caret-position="102">
+          <caret line="25" column="85" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
           <folding>
             <element signature="e#402#423#0#HTML" expanded="true" />
             <element signature="e#447#471#0#HTML" expanded="true" />
             <element signature="e#512#536#0#HTML" expanded="true" />
             <element signature="e#588#608#0#HTML" expanded="true" />
-            <marker date="1609860492966" expanded="false" signature="1847:3090" ph="..." />
+            <marker date="1609861207073" expanded="false" signature="1879:3122" ph="..." />
           </folding>
         </state>
       </provider>

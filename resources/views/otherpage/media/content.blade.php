@@ -20,10 +20,10 @@
     <section class="section-base section-color">
         <div class="container">
             <ul class="text-list text-list-side boxed-area">
-                @forelse($media->items as $item)
+                @forelse($media->items->reverse() as $item)
                     <li>
                         <h3>{{ @$item->file->ext }}</h3>
-                        <p>Download {{ @$item->file->original_name }}</p>
+                        <p>Download {{ ucwords(strtolower(@$item->file->original_name)) }}</p>
                         <div><a href="{{ route('media.content.download', encrypt(@$item->uuid)) }}">Download</a></div>
                     </li>
                 @empty
