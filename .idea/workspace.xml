@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="433f0712-5115-446e-a240-542f37722f82" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" afterPath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" afterPath="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,14 +26,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="section3.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="section3.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="204">
               <caret line="12" column="81" lean-forward="true" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2020_05_07_181032_create_image_uploads_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,17 +88,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="26" column="118" lean-forward="true" selection-start-line="26" selection-start-column="118" selection-end-line="26" selection-end-column="118" />
+            <state relative-caret-position="187">
+              <caret line="25" column="106" lean-forward="false" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
               <folding>
                 <element signature="e#402#423#0#HTML" expanded="true" />
                 <element signature="e#447#471#0#HTML" expanded="true" />
                 <element signature="e#512#536#0#HTML" expanded="true" />
                 <element signature="e#588#608#0#HTML" expanded="true" />
-                <marker date="1609861207073" expanded="false" signature="1879:3122" ph="..." />
+                <marker date="1609865120898" expanded="false" signature="1901:3144" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,16 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="section3.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/otherpage/media/section3.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -214,7 +216,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/backgroundImage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/read.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MedaiCenterController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_01_04_203928_create_media_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/sidenav.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/media/create.blade.php" />
@@ -238,9 +239,10 @@
         <option value="$PROJECT_DIR$/resources/views/otherpage/media/section3.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Activity/ResourceController.php" />
-        <option value="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Sermons.php" />
         <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" />
       </list>
     </option>
   </component>
@@ -254,9 +256,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1592" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
+    <option name="width" value="1616" />
     <option name="height" value="886" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -386,6 +388,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winners_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winners_site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winners_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winners_site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -689,18 +723,18 @@
       <workItem from="1607888349404" duration="633000" />
       <workItem from="1607946057626" duration="1679000" />
       <workItem from="1608610124937" duration="3859000" />
-      <workItem from="1609788535961" duration="22443000" />
+      <workItem from="1609788535961" duration="24051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284511000" />
+    <option name="totallyTimeSpent" value="286119000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-8" width="1456" height="886" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25143266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22557841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -780,14 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1150,20 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="26" column="118" lean-forward="true" selection-start-line="26" selection-start-column="118" selection-end-line="26" selection-end-column="118" />
-          <folding>
-            <element signature="e#402#423#0#HTML" expanded="true" />
-            <element signature="e#447#471#0#HTML" expanded="true" />
-            <element signature="e#512#536#0#HTML" expanded="true" />
-            <element signature="e#588#608#0#HTML" expanded="true" />
-            <marker date="1609861207073" expanded="false" signature="1879:3122" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1180,12 +1192,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="204">
           <caret line="12" column="81" lean-forward="true" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" column="106" lean-forward="false" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
+          <folding>
+            <element signature="e#402#423#0#HTML" expanded="true" />
+            <element signature="e#447#471#0#HTML" expanded="true" />
+            <element signature="e#512#536#0#HTML" expanded="true" />
+            <element signature="e#588#608#0#HTML" expanded="true" />
+            <marker date="1609865120898" expanded="false" signature="1901:3144" ph="..." />
           </folding>
         </state>
       </provider>

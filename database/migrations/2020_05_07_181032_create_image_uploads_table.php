@@ -21,7 +21,7 @@ class CreateImageUploadsTable extends Migration
             $table->string('ext')->nullable();
             $table->string('original_name')->nullable();
             $table->string('name')->nullable();
-            $table->float('size')->nullable();
+            $table->float('size', 14, 2)->nullable();
             $table->integer('width')->nullable();
             $table->bigInteger('time')->nullable();
             $table->boolean('valid')->nullable();

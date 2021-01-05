@@ -23,7 +23,7 @@
                 @forelse($media->items->reverse() as $item)
                     <li>
                         <h3>{{ @$item->file->ext }}</h3>
-                        <p>Download {{ ucwords(strtolower(@$item->file->original_name)) }}</p>
+                        <p>Download {{ ucwords(strtolower(str_replace("_"," ", @$item->file->original_name))) }}</p>
                         <div><a href="{{ route('media.content.download', encrypt(@$item->uuid)) }}">Download</a></div>
                     </li>
                 @empty
