@@ -37,7 +37,8 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                            <li class="breadcrumb-item active">Files</li>
+                            <li class="breadcrumb-item"><a href="{{ !empty($return)?route($return):'#' }}">{{ @$model }}</a></li>
+                            <li class="breadcrumb-item active">Add Files to {{ @$model }}</li>
                         </ol>
                     </div>
                 </div>
@@ -71,51 +72,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
             <!-- Ecommerce Products Starts -->
             <section id="ecommerce-products" class="grid-view">
                 @foreach($files as $file)
-                    <div class="card ecommerce-card">
-                        <div class="card-content">
-                            <a href="#" style=" ">
-                                <div class="item-img text-center" style="position: relative;vertical-align: middle;text-align: center;">
-                                    <img class="img-fluid" src="{{ $file->thumb }}" alt="img-placeholder" style="max-height: 100%;max-width: 100%;width: auto;height: auto;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;">
-                                </div>
-                            </a>
-                            <div class="card-body">
-
-                                <div>
-                                    <h5 class="item-description">{{ $file->name }}</h5>
-                                </div>
-                                <div class="item-wrapper">
-                                    <div>
-                                        <p class="item-price">
-                                            Width: {{ $file->width }}px
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-options text-center">
-                                @if(!empty($model))
-                                    @if($model==='slider')
-                                        <div class="wishlist">
-                                            <i class="fa fa-info-circle"></i> <span>
-                                                {{ $file->sized }}
-                                            </span>
-                                        </div>
-                                        <div class="cart">
-                                            <a href="{{ route('add.slider', $file->uuid) }}"><i class="feather icon-layers"></i> <span class="">Add to Slider</span></a>
-                                        </div>
-                                    @endif
-                                @else
-                                    <div class="wishlist">
-                                        <i class="fa fa-trash"></i> <span>Delete</span>
-                                    </div>
-                                    <div class="cart">
-                                        <a href="#"><i class="feather icon-layers"></i> <span class="">Preview</span></a>
-                                    </div>
-                                @endif
-
-
-                            </div>
-                        </div>
-                    </div>
+                    @include('admin.pages.files.item')
                 @endforeach
                 <!--
                     <div class="card ecommerce-card">

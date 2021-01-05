@@ -1,5 +1,5 @@
 <?php
-$season = 'christmas';
+$season = '';//christmas
 ?>
 @extends('layouts.app')
 

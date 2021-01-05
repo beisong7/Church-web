@@ -17,6 +17,7 @@
             <li class="{{ @$sidenav['role'] }}  nav-item"><a href="{{ route('role.index') }}"><i class="feather icon-user-check"></i><span class="menu-title" data-i18n="Admins">Roles</span></a></li>
 
             <li class=" navigation-header"><span>Resource</span></li>
+            <li class="{{ @$sidenav['media'] }}  nav-item"><a href="{{ route('media.index') }}"><i class="feather icon-package"></i><span class="menu-title" data-i18n="WSF Outline">Media</span></a></li>
             <li class="{{ @$sidenav['wsf_outline'] }}  nav-item"><a href="{{ route('wsf.index') }}"><i class="fa fa-file-pdf-o"></i><span class="menu-title" data-i18n="WSF Outline">WSF Outline</span></a></li>
             <li class="{{ @$sidenav['pages'] }}  nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Pages">Pages</span></a></li>
             <li class="{{ @$sidenav['preacher'] }}  nav-item"><a href="{{ route('preacher.index') }}"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Pages">Preacher</span></a></li>

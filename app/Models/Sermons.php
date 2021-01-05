@@ -36,4 +36,8 @@ class Sermons extends Model
     public function getIntroductionAttribute(){
         return Str::words($this->intro, 18, '...');
     }
+
+    public function getheadingAttribute(){
+        return Str::words($this->title, $limit = 7, $end = '...');
+    }
 }

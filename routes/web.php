@@ -47,7 +47,7 @@ Route::group(['middleware'=>'admin'], function () {
         //sliders and gallery
         Route::get('sliders', 'Dashboard\SliderController@index')->name('sliders');
         Route::get('gallery-list', 'Dashboard\GalleryController@galleryList')->name('gallery.list');
-        Route::get('add-slider/{uuid}', 'Dashboard\SliderController@add')->name('add.slider');
+
         Route::get('pop-slider', 'Dashboard\SliderController@pop')->name('slider.pop');
 
         //Site info routes
@@ -87,6 +87,12 @@ Route::group(['middleware'=>'admin'], function () {
         Route::resource('preacher', 'Dashboard\PreacherController');
         Route::get('toggle/preacher/{uuid}', 'Dashboard\PreacherController@toggleCurrent')->name('preacher.toggle');
         Route::get('delete-preacher', 'Dashboard\PreacherController@delete')->name('preacher.pop');
+
+        //Media Routes
+        Route::resource('media', 'Media\MediaController');
+        Route::get('media/manage/{uuid}', 'Media\MediaController@manage')->name('media.manage');
+        Route::get('add/to/media', 'Dashboard\GalleryController@addtomedia')->name('add.to.model');
+        Route::get('media/item/{uuid}/remove', 'Media\MediaController@removeMediaItem')->name('media.item.pop');
     });
 });
 
@@ -99,3 +105,8 @@ Route::get('action/success', 'AdminInviteController@actionSuccess')->name('actio
 //other page routes
 Route::get('sermons', 'SermonController@index')->name('sermon.list');
 Route::get('sermon/read/{id}', 'SermonController@readNow')->name('read.sermon');
+
+//media-center
+Route::get('media', 'Activity\ResourceController@index')->name('media.list');
+Route::get('media/content/{slug}', 'Activity\ResourceController@mediaContent')->name('media.show.contents');
+Route::get('media/content/download/{secret}', 'Activity\ResourceController@mediaContentDownload')->name('media.content.download');

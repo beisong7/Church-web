@@ -1,5 +1,5 @@
 <?php
-$sidenav['slider'] = 'active';
+$sidenav['media'] = 'active';
 $data_col = "content-detached-left-sidebar";
 $bd_class="content-detached-left-sidebar ecommerce-application";
 ?>
@@ -27,17 +27,17 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
     <div class="content-header row">
         <div class="content-header-left col-md-12 col-12 mb-2">
             <div class="row breadcrumbs-top">
-                <div class="col-md-10 col-sm-12">
-                    <h2 class="content-header-title float-left mb-0">Sliders</h2>
+                <div class="col-md-8 col-sm-12">
+                    <h2 class="content-header-title float-left mb-0">Media</h2>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Sliders</li>
+                            <li class="breadcrumb-item active">Media</li>
                         </ol>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-12 text-right">
-                    <a href="{{ route('gallery.list', ['type'=>'image', 'model'=>'slider', 'action'=>'add', 'return'=>'sliders']) }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>
+                <div class="col-md-4 col-sm-12 text-right">
+                    <a href="{{ route('media.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New Group</a>
                 </div>
             </div>
         </div>
@@ -46,6 +46,11 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
         <!-- Data list view starts -->
         <section id="data-list-view" class="data-list-view-header">
 
+            <div class="row">
+                <div class="col">
+                    @include('layouts.notice')
+                </div>
+            </div>
 
             <!-- DataTable starts -->
             <div class="table-responsive">
@@ -53,23 +58,26 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                     <thead>
                     <tr>
                         <th></th>
-                        <th>ADDED</th>
-                        <th>THUMB</th>
-                        <th>STATUS</th>
-                        <th>ACTION</th>
+                        <th>Names</th>
+                        <th>Author</th>
+                        <th>Created</th>
+                        <th>Status</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($sliders as $slider)
+                    @foreach($media_group as $group)
                         <tr>
                             <td></td>
-                            <td class="product-name">{{ $slider->created_at->diffForHumans() }}</td>
-                            <td class="product-category">
-                                <img src="{{ $slider->image->thumbnail->pic }}" alt="" style="max-width: 150px">
-                            </td>
-                            <td class="product-category">{{ $slider->active?'Active':'Inactive' }}</td>
+                            <td class="product-name">{{ $group->title }}</td>
+                            <td class="product-name">{{ $group->author->names }}</td>
+                            <td class="product-name">{{ $group->created_at->diffForHumans() }}</td>
+                            <td class="product-category">{{ $group->active?'Active':'Inactive' }}</td>
                             <td class="product-action">
-                                <span class="action-delete" data-uuid="{{ $slider->uuid }}"><i class="feather icon-trash"></i></span>
+                                <a href="{{ route('media.edit', $group->uuid) }}" class="ml-2 text-white"><i class="feather icon-edit"></i> Edit</a>
+                                <a href="{{ route('gallery.list', ['type'=>'all', 'model'=>'media', 'action'=>'add', 'anchor'=>$group->uuid, 'return'=>'media.index']) }}" class="ml-2 text-white"><i class="feather icon-box"></i> Add Resources</a>
+                                <a href="{{ route('media.show', $group->uuid) }}" class="ml-2 text-white"><i class="feather icon-layers"></i> Items</a>
+                                {{--<span class="ml-2 action-delete" data-uuid="{{ $group->uuid }}"><i class="feather icon-trash"></i></span>--}}
                             </td>
                         </tr>
                     @endforeach
@@ -92,7 +100,6 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="{{ asset('app-assets/vendors/js/extensions/dropzone.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.buttons.min.js') }}"></script>
     <script src="{{ asset('app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js') }}"></script>
@@ -243,7 +250,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                 var dom = $(this);
                 var uuid = dom.data('uuid');
 //                console.log(uuid);
-                var route = '{{ route('slider.pop') }}'+'?uuid='+uuid;
+                var route = '{{ route('admin.pop') }}'+'?uuid='+uuid;
                 $.ajax({
                     type:'GET',
                     url: route,
@@ -263,23 +270,6 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
 
             });
 
-            // dropzone init
-            Dropzone.options.dataListUpload = {
-                complete: function(files) {
-                    var _this = this
-                    // checks files in class dropzone and remove that files
-                    $(".hide-data-sidebar, .cancel-data-btn, .actions .dt-buttons").on(
-                        "click",
-                        function() {
-                            $(".dropzone")[0].dropzone.files.forEach(function(file) {
-                                file.previewElement.remove()
-                            })
-                            $(".dropzone").removeClass("dz-started")
-                        }
-                    )
-                }
-            }
-            Dropzone.options.dataListUpload.complete()
 
             // mac chrome checkbox fix
             if (navigator.userAgent.indexOf("Mac OS X") != -1) {

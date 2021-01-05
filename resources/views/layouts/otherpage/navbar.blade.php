@@ -13,14 +13,19 @@
                     <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="{{ @$active['sermons'] }}">
-                    <a href="#">Sermons</a>
+                    <a href="{{ route('sermon.list') }}">Sermons</a>
                 </li>
+                <li class="{{ @$active['media'] }}">
+                    <a href="{{ route('media.list') }}">Media</a>
+                </li>
+                {{--
                 <li class="{{ @$active['announcement'] }}">
                     <a href="#features">Announcements</a>
                 </li>
                 <li class="{{ @$active['epistle'] }}">
                     <a href="#">Epistle</a>
                 </li>
+                --}}
                 {{--
                 <li class="dropdown">
                     <a href="#">Pages</a>
