@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="433f0712-5115-446e-a240-542f37722f82" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Sermons.php" afterPath="$PROJECT_DIR$/app/Models/Sermons.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" afterPath="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="section3.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="section3.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="29" column="62" lean-forward="true" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+            <state relative-caret-position="85">
+              <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -91,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sermons.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sermons.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Sermons.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+            <state relative-caret-position="147">
+              <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -212,7 +211,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/scripts/css.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/backgroundImage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/read.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MedaiCenterController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_05_07_181032_create_image_uploads_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_01_04_203928_create_media_table.php" />
@@ -240,6 +238,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Activity/ResourceController.php" />
         <option value="$PROJECT_DIR$/resources/views/otherpage/media/content.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Sermons.php" />
+        <option value="$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php" />
       </list>
     </option>
   </component>
@@ -688,12 +687,12 @@
       <workItem from="1607888349404" duration="633000" />
       <workItem from="1607946057626" duration="1679000" />
       <workItem from="1608610124937" duration="3859000" />
-      <workItem from="1609788535961" duration="22327000" />
+      <workItem from="1609788535961" duration="22400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284395000" />
+    <option name="totallyTimeSpent" value="284468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1456" height="886" extended-state="6" />
@@ -1052,7 +1051,7 @@
         <state relative-caret-position="357">
           <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="49" />
           <folding>
-            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1096,7 +1095,7 @@
         <state relative-caret-position="334">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1171,18 +1170,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Sermons.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="29" column="62" lean-forward="true" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+        <state relative-caret-position="147">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Sermons.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/otherpage/sermon/section3.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="85">
+          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding />
         </state>
       </provider>

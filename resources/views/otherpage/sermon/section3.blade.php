@@ -10,7 +10,7 @@
         <div class="row">
 
             @foreach($popular as $sermon)
-                <div class="col-lg-6 col-sm-12">
+                <div class="col-lg-6 col-sm-12 mb-4">
                     <div class="grid-list" data-columns="1">
                         <div class="grid-box">
                             <div class="grid-item">
