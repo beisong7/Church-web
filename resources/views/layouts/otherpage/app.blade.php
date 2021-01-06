@@ -8,18 +8,27 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'LFC Durumi') }}</title>
+    <title>{{ !empty($title)?$title." | LFC Durumi":config('app.name', 'LFC Durumi') }}</title>
     <link rel="icon" type="image/png" href="{{ url('images/logo.png') }}"/>
 
-    <meta name="description" content="Winners Chapel Durumi, Home of Signs and Wonders. Services.">
+    <meta name="description" content="{{ !empty($description)?$description:'Winners Chapel Durumi, Home of Signs and Wonders. Services.' }}">
     <meta name="keywords" content="Winners Chapel Durumi, Winners, Durumi, Worship, Home, Signs, Wonders">
-    <meta name="author" content="synergynode.com, winnersdurumi.org, technical-unit">
+    <meta name="author" content="winnersdurumi.org, technical-unit with synergynode.com">
 
     <!-- FAVICONS -->
     <link rel="icon" href="{{ url('') }}">
     <link rel="apple-touch-icon" href="{{ url('') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ url('') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ url('') }}">
+
+    <?php $metas = ['image', 'title', 'description', 'type', 'url',]; ?>
+    @foreach($metas as $meta)
+        @if(!empty($og))
+            @if(!empty($og[$meta]))
+                <meta property="og:{{ $meta }}" content="{{ $og[$meta] }}">
+            @endif
+        @endif
+    @endforeach
 
     <!-- WEB FONT-FAMILY -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">

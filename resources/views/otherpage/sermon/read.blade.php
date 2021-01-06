@@ -1,5 +1,12 @@
 <?php
     $active['sermons'] = 'active';
+    $title = $sermon->title;
+    $og['image'] = $sermon->preacher->photo;
+    $og['title'] = $title;
+    $description = $sermon->intro;
+    $og['description'] = $description;
+    $og['type'] = "article";
+    $og['url'] = route('read.sermon', $sermon->uuid);
 ?>
 @section('custom_css')
     <style>
@@ -103,7 +110,7 @@
                         <ul>
                             @forelse($sermons as $item)
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route('read.sermon', $item->uuid) }}">
                                         <img src="{{ $item->preacher->photo }}" alt="" style="width: 80px" />
                                         <span>{{ date('d M Y', $item->date) }}</span>
                                         {{ $item->title }}
