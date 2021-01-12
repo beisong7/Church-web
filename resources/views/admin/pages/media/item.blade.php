@@ -2,6 +2,7 @@
     <div class="card ecommerce-card">
         <div class="card-content">
             <div class="item-img text-center" style="position:relative!important; vertical-align: middle;text-align: center;">
+                <span class="badge badge-success">{{ number_format($item->download_count) }} <i class="feather icon-download"></i></span>
                 @if($item->file->isImg)
                     <img class="img-fluid" src="{{ $item->file->thumb }}" alt="img-placeholder" style="width: 60%; max-height: 150px; margin: auto;padding-top: 15%">
                 @else

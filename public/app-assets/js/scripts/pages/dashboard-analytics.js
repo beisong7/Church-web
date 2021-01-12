@@ -178,7 +178,7 @@ $(window).on("load", function () {
     console.log("chart resource : ", chartResource);
     var jqxhr = $.get( "/dashboard/get-chart-data", function(data) {
         console.log(data);
-        chartResource = data.resource;
+
 
 
         var sessionChartoptions = {
@@ -194,10 +194,13 @@ $(window).on("load", function () {
                 }
             },
             colors: [$label_color, $label_color, $primary, $label_color, $label_color, $label_color],
-            series: [{
-                name: 'Downloads',
-                data: chartResource
-            }],
+            series:
+                [
+                    {
+                        name: 'Downloads',
+                        data: data.values,
+                    }
+                ],
             grid: {
                 show: false,
                 padding: {
@@ -208,16 +211,20 @@ $(window).on("load", function () {
 
             plotOptions: {
                 bar: {
-                    columnWidth: '45%',
+                    columnWidth: '10%',
                     distributed: true,
                     endingShape: 'rounded'
                 }
             },
             tooltip: {
-                x: { show: false }
+                x: { show: true },
             },
             xaxis: {
-                type: 'numeric',
+                // type: 'numeric',
+                categories: data.days,
+            },
+            yaxis: {
+
             }
         }
 
