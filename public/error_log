@@ -1,0 +1,3 @@
+[06-Aug-2020 13:17:05 America/New_York] PHP Warning:  require(/home/synekfwv/tenants/winnersdurumi/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/synekfwv/tenants/winnersdurumi/public/index.php on line 24
+[06-Aug-2020 13:17:05 America/New_York] PHP Warning:  require(/home/synekfwv/tenants/winnersdurumi/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/synekfwv/tenants/winnersdurumi/public/index.php on line 24
+[06-Aug-2020 13:17:05 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/synekfwv/tenants/winnersdurumi/public/../vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/synekfwv/tenants/winnersdurumi/public/index.php on line 24
