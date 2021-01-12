@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\ImageUpload;
+use App\Models\MediaItem;
 use App\Models\SiteSettings;
 use App\Models\Slider;
 use App\User;
@@ -19,12 +20,14 @@ class BoardController extends Controller
         $admins = User::where('active', true)->select(['id'])->get()->count();
         $sliders = Slider::where('active', true)->select(['id'])->get()->count();
         $files = ImageUpload::where('id', '!=', null)->select(['id'])->get()->count();
+        $downloads = MediaItem::get()->sum('download_count');
 
         return view('admin.pages.dashboard.index')
             ->with([
                 'admins'=>$admins,
                 'sliders'=>$sliders,
                 'files'=>$files,
+                'downloads'=>$downloads
             ]);
     }
 

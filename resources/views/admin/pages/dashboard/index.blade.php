@@ -28,6 +28,36 @@ $bd_class="2-columns";
     <div class="content-body">
         <section id="dashboard-analytics">
             <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row pb-50">
+                                    <div class="col-12 d-flex justify-content-between flex-column text-right order-lg-2 order-1">
+                                        <p>Recent Media Downloads</p>
+                                        <div id="avg-session-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="card">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="avatar bg-rgba-primary p-50 m-0">
+                                <div class="avatar-content">
+                                    <i class="feather icon-download text-primary font-medium-5"></i>
+                                </div>
+                            </div>
+                            <h2 class="text-bold-700 mt-1 mb-25">{{ $downloads }}</h2>
+                            <p class="mb-0">Downloads</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-12">
                     <div class="card">
                         <div class="card-body d-flex flex-column align-items-center">

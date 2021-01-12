@@ -98,6 +98,8 @@ $(window).on("load", function () {
   // Orders Received Chart starts //
   // ----------------------------------
 
+    var resource = [10, 15, 8, 15, 7, 12, 8];
+
   var orderChartoptions = {
     chart: {
       height: 100,
@@ -135,7 +137,7 @@ $(window).on("load", function () {
     },
     series: [{
       name: 'Orders',
-      data: [10, 15, 8, 15, 7, 12, 8]
+      data: resource
     }],
 
     xaxis: {
@@ -171,52 +173,70 @@ $(window).on("load", function () {
   // Avg Session Chart Starts
   // ----------------------------------
 
-  var sessionChartoptions = {
-    chart: {
-      type: 'bar',
-      height: 200,
-      sparkline: { enabled: true },
-      toolbar: { show: false },
-    },
-    states: {
-      hover: {
-        filter: 'none'
-      }
-    },
-    colors: [$label_color, $label_color, $primary, $label_color, $label_color, $label_color],
-    series: [{
-      name: 'Sessions',
-      data: [75, 125, 225, 175, 125, 75, 25]
-    }],
-    grid: {
-      show: false,
-      padding: {
-        left: 0,
-        right: 0
-      }
-    },
+    var chartResource = [75, 125, 225, 175, 125, 75, 25];
 
-    plotOptions: {
-      bar: {
-        columnWidth: '45%',
-        distributed: true,
-        endingShape: 'rounded'
-      }
-    },
-    tooltip: {
-      x: { show: false }
-    },
-    xaxis: {
-      type: 'numeric',
-    }
-  }
+    console.log("chart resource : ", chartResource);
+    var jqxhr = $.get( "/dashboard/get-chart-data", function(data) {
+        console.log(data);
+        chartResource = data.resource;
 
-  var sessionChart = new ApexCharts(
-    document.querySelector("#avg-session-chart"),
-    sessionChartoptions
-  );
 
-  sessionChart.render();
+        var sessionChartoptions = {
+            chart: {
+                type: 'bar',
+                height: 200,
+                sparkline: { enabled: true },
+                toolbar: { show: false },
+            },
+            states: {
+                hover: {
+                    filter: 'none'
+                }
+            },
+            colors: [$label_color, $label_color, $primary, $label_color, $label_color, $label_color],
+            series: [{
+                name: 'Downloads',
+                data: chartResource
+            }],
+            grid: {
+                show: false,
+                padding: {
+                    left: 0,
+                    right: 0
+                }
+            },
+
+            plotOptions: {
+                bar: {
+                    columnWidth: '45%',
+                    distributed: true,
+                    endingShape: 'rounded'
+                }
+            },
+            tooltip: {
+                x: { show: false }
+            },
+            xaxis: {
+                type: 'numeric',
+            }
+        }
+
+        var sessionChart = new ApexCharts(
+            document.querySelector("#avg-session-chart"),
+            sessionChartoptions
+        );
+
+        sessionChart.render();
+
+    }).done(function() {
+        console.log('data loaded')
+        })
+    .fail(function(data) {
+        // alert( "error! contact dev admin" );
+    })
+    .always(function() {
+        console.log('get completed')
+    });
 
   // Avg Session Chart ends //
 

@@ -32,6 +32,10 @@ Route::get('download/wsf-outline/{uuid}', 'Dashboard\WsfOutlineController@downlo
 
 Route::group(['middleware'=>'admin'], function () {
     Route::prefix('dashboard')->group(function () {
+        //download charts
+        Route::get('get-chart-data', 'Dashboard\ChartController@chart');
+
+
         //logout
         Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
