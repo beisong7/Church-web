@@ -8,6 +8,7 @@ use App\Services\SermonServices;
 use App\Traits\General\Utility;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class SermonsController extends Controller
 {
@@ -27,7 +28,7 @@ class SermonsController extends Controller
     {
         return view('admin.pages.sermon.index')
             ->with([
-                'sermons'=>$this->services->loadSermon(null, null, ['updated_at','desc'])
+                'sermons'=>$this->services->allSermon(20, null, ['created_at','desc'])
             ]);
     }
 
@@ -61,13 +62,20 @@ class SermonsController extends Controller
                 'date'=>'required',
             ]
         );
-        $data = $request->all();
-        $data['date'] = strtotime($request->input('date'));
-        $data['uuid'] = $this->generateId();
-        if($this->services->saveDraft($data)){
-            return redirect()->route('sermon.index');
+        $slug = strtolower($request->input('title'));
+        $slug = str_replace(" ", "-", $slug);
+        $exist = Sermons::where('slug', $slug)->first();
+        if(empty($exist)){
+            $data = $request->all();
+            $data['date'] = strtotime($request->input('date'));
+            $data['uuid'] = $this->generateId();
+            $data['slug'] = $slug;
+            if($this->services->saveDraft($data)){
+                return redirect()->route('sermon.index');
+            }
+            return back()->withErrors(['Oops something failed. Refersh and try again.'])->withInput();
         }
-        return back()->withErrors(['Oops something failed. Refersh and try again.'])->withInput();
+        return back()->withErrors(['Title already taken, Change title.'])->withInput();
 
     }
 
@@ -161,5 +169,26 @@ class SermonsController extends Controller
             return back()->withMessage($message);
         }
         return redirect()->route('sermon.index')->withErrors(['Resource not found']);
+    }
+
+    public function fixSlug(){
+        $sermons = Sermons::where('slug', null)->get();
+        $failed = 0;
+        $count = 0;
+        foreach ($sermons as $sermon){
+            $slug = str_replace(" ", "-", strtolower($sermon->title));
+            $exist = Sermons::where('slug', $slug)->first();
+            if(empty($exist)){
+                $data['slug'] = $slug;
+                DB::beginTransaction();
+                $sermon->update($data);
+                DB::commit();
+                $count++;
+            }else{
+                $failed++;
+            }
+        }
+
+        return["message"=>"Completed {$count} | {$failed} Failed!"];
     }
 }

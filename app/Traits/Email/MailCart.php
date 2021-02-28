@@ -8,7 +8,7 @@ trait MailCart{
 
     protected $emailService;
 
-    function __construct(EmailServices $services)
+    public function __construct(EmailServices $services)
     {
         $this->emailService = $services;
     }

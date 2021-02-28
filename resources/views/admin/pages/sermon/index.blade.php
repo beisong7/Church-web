@@ -52,45 +52,66 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                     @include('layouts.notice')
                 </div>
             </div>
-            <!-- DataTable starts -->
-            <div class="table-responsive">
-                <table class="table data-list-view">
-                    <thead>
-                    <tr>
-                        <th></th>
-                        <th>TITLE</th>
-                        <th>LAST UPDATE</th>
-                        <th>PUBLISHED</th>
-                        <th>ACTION</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($sermons as $sermon)
-                        <tr>
-                            <td></td>
-                            <td class="product-category">{{ $sermon->title }}</td>
-                            <td class="product-category">{{ date('F d, Y', strtotime($sermon->updated_at)) }}</td>
-                            <td class="product-category">{{ $sermon->published?'Yes':'No' }}</td>
-                            <td class="product-action">
-                                <a href="{{ route('sermon.toggle', $sermon->uuid) }}" class="ml-2 text-white">
-                                    @if($sermon->published)
-                                        <i title="Un-Publish" class="text-danger feather icon-cloud-lightning"></i>
-                                    @else
-                                        <i title="Publish" class=" feather icon-upload"></i>
-                                    @endif
-                                </a>
-                                <a href="{{ route('sermon.edit', $sermon->uuid) }}" class="ml-2 text-white">
-                                    <i title="Start Edit" class=" feather icon-edit"></i>
-                                </a>
-                                <span title="Delete Immediately" class="ml-2 action-delete" data-uuid="{{ $sermon->uuid }}"><i class="feather icon-trash"></i></span>
-                            </td>
-                        </tr>
-                    @endforeach
+            <!-- TABLE START -->
+            <div class="row" id="table-striped">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Sermons</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th style="max-width: 400px">TITLE</th>
+                                            <th>LAST UPDATE</th>
+                                            <th>PUBLISHED</th>
+                                            <th>ACTION</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @forelse($sermons as $sermon)
+                                            <tr>
+                                                <td class="product-category" style="max-width: 400px">{{ $sermon->title }}</td>
+                                                <td class="product-category">{{ date('F d, Y', strtotime($sermon->updated_at)) }}</td>
+                                                <td class="product-category">{{ $sermon->published?'Yes':'No' }}</td>
+                                                <td class="product-action">
+                                                    <a href="{{ route('sermon.toggle', $sermon->uuid) }}" class="ml-2 text-white">
+                                                        @if($sermon->published)
+                                                            <i title="Un-Publish" class="text-danger feather icon-cloud-lightning"></i>
+                                                        @else
+                                                            <i title="Publish" class=" feather icon-upload"></i>
+                                                        @endif
+                                                    </a>
+                                                    <a href="{{ route('sermon.edit', $sermon->uuid) }}" class="ml-2 text-white">
+                                                        <i title="Start Edit" class=" feather icon-edit"></i>
+                                                    </a>
+                                                    <span title="Delete Immediately" class="ml-2 action-delete" data-uuid="{{ $sermon->uuid }}"><i class="feather icon-trash"></i></span>
+                                                </td>
+                                            </tr>
+                                        @empty
+                                            <tr>
+                                                <td colspan="5">
+                                                    <h4 class="text-center">No Records Found</h4>
+                                                </td>
+                                            </tr>
+                                        @endforelse
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                    </tbody>
-                </table>
+                                <div class="mt-3">
+                                    {{ $sermons->links() }}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- DataTable ends -->
+            <!-- TABLE ENDS -->
         </section>
         <!-- Data list view end -->
 
@@ -115,191 +136,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
 @endsection
 
 @section('custom_js')
-    {{--<script src="{{ asset('app-assets/js/scripts/ui/data-list-view.js') }}"></script>--}}
     <script>
-        /*=========================================================================================
-         File Name: data-list-view.js
-         Description: List View
-         ----------------------------------------------------------------------------------------
-         Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
-         Author: PIXINVENT
-         Author URL: http://www.themeforest.net/user/pixinvent
-         ==========================================================================================*/
-
-        $(document).ready(function() {
-            "use strict"
-            // init list view datatable
-            var dataListView = $(".data-list-view").DataTable({
-                responsive: false,
-                columnDefs: [
-                    {
-                        orderable: true,
-                        targets: 0,
-                        checkboxes: { selectRow: true }
-                    }
-                ],
-                dom:
-                    '<"top"<"actions action-btns"B><"action-filters"lf>><"clear">rt<"bottom"<"actions">p>',
-                oLanguage: {
-                    sLengthMenu: "_MENU_",
-                    sSearch: ""
-                },
-                aLengthMenu: [[10, 20, 30], [10, 20, 30]],
-                select: {
-                    style: "multi"
-                },
-                order: [[1, "asc"]],
-                bInfo: false,
-                pageLength: 10,
-                buttons: [
-                    {
-//                        text: "<i class='feather icon-plus'></i> Add New",
-//                        action: function() {
-//                            $(this).removeClass("btn-secondary")
-//                            $(".add-new-data").addClass("show")
-//                            $(".overlay-bg").addClass("show")
-//                            $("#data-name, #data-price").val("")
-//                            $("#data-category, #data-status").prop("selectedIndex", 0)
-//                        },
-//                        className: "btn-outline-primary"
-                    }
-                ],
-                initComplete: function(settings, json) {
-                    $(".dt-buttons .btn").removeClass("btn-secondary")
-                }
-            });
-
-            dataListView.on('draw.dt', function(){
-                setTimeout(function(){
-                    if (navigator.userAgent.indexOf("Mac OS X") != -1) {
-                        $(".dt-checkboxes-cell input, .dt-checkboxes").addClass("mac-checkbox")
-                    }
-                }, 50);
-            });
-
-            // init thumb view datatable
-            var dataThumbView = $(".data-thumb-view").DataTable({
-                responsive: false,
-                columnDefs: [
-                    {
-                        orderable: true,
-                        targets: 0,
-                        checkboxes: { selectRow: true }
-                    }
-                ],
-                dom:
-                    '<"top"<"actions action-btns"B><"action-filters"lf>><"clear">rt<"bottom"<"actions">p>',
-                oLanguage: {
-                    sLengthMenu: "_MENU_",
-                    sSearch: ""
-                },
-                aLengthMenu: [[4, 10, 15, 20], [4, 10, 15, 20]],
-                select: {
-                    style: "multi"
-                },
-                order: [[1, "asc"]],
-                bInfo: false,
-                pageLength: 4,
-                buttons: [
-                    {
-                        text: "<i class='feather icon-plus'></i> Add New",
-                        action: function() {
-                            $(this).removeClass("btn-secondary")
-                            $(".add-new-data").addClass("show")
-                            $(".overlay-bg").addClass("show")
-                        },
-                        className: "btn-outline-primary"
-                    }
-                ],
-                initComplete: function(settings, json) {
-                    $(".dt-buttons .btn").removeClass("btn-secondary")
-                }
-            })
-
-            dataThumbView.on('draw.dt', function(){
-                setTimeout(function(){
-                    if (navigator.userAgent.indexOf("Mac OS X") != -1) {
-                        $(".dt-checkboxes-cell input, .dt-checkboxes").addClass("mac-checkbox")
-                    }
-                }, 50);
-            });
-
-            // To append actions dropdown before add new button
-            var actionDropdown = $(".actions-dropodown")
-            actionDropdown.insertBefore($(".top .actions .dt-buttons"))
-
-
-            // Scrollbar
-            if ($(".data-items").length > 0) {
-                new PerfectScrollbar(".data-items", { wheelPropagation: false })
-            }
-
-            // Close sidebar
-            $(".hide-data-sidebar, .cancel-data-btn, .overlay-bg").on("click", function() {
-                $(".add-new-data").removeClass("show")
-                $(".overlay-bg").removeClass("show")
-                $("#data-name, #data-price").val("")
-                $("#data-category, #data-status").prop("selectedIndex", 0)
-            })
-
-            // On Edit
-            $('.action-edit').on("click",function(e){
-                e.stopPropagation();
-                $('#data-name').val('Altec Lansing - Bluetooth Speaker');
-                $('#data-price').val('$99');
-                $(".add-new-data").addClass("show");
-                $(".overlay-bg").addClass("show");
-            });
-
-            // On Delete
-            $('.action-delete').on("click", function(e){
-                var dom = $(this);
-                var uuid = dom.data('uuid');
-//                console.log(uuid);
-                var route = '{{ route('sermon.pop') }}'+'?uuid='+uuid;
-                $.ajax({
-                    type:'GET',
-                    url: route,
-                    data:{
-                        _token : "{{ csrf_token() }}",
-                    },
-
-                    success:function(data) {
-//                        console.log(data);
-                        if(data.success){
-                            e.stopPropagation();
-                            dom.closest('td').parent('tr').fadeOut();
-                        }
-
-                    }
-                });
-
-            });
-
-            // dropzone init
-            Dropzone.options.dataListUpload = {
-                complete: function(files) {
-                    var _this = this
-                    // checks files in class dropzone and remove that files
-                    $(".hide-data-sidebar, .cancel-data-btn, .actions .dt-buttons").on(
-                        "click",
-                        function() {
-                            $(".dropzone")[0].dropzone.files.forEach(function(file) {
-                                file.previewElement.remove()
-                            })
-                            $(".dropzone").removeClass("dz-started")
-                        }
-                    )
-                }
-            }
-            Dropzone.options.dataListUpload.complete()
-
-            // mac chrome checkbox fix
-            if (navigator.userAgent.indexOf("Mac OS X") != -1) {
-                $(".dt-checkboxes-cell input, .dt-checkboxes").addClass("mac-checkbox")
-            }
-        })
-
 
     </script>
 @endsection

@@ -110,7 +110,7 @@
                         <ul>
                             @forelse($sermons as $item)
                                 <li>
-                                    <a href="{{ route('read.sermon', $item->uuid) }}">
+                                    <a href="{{ route('read.sermon', $item->slug) }}">
                                         <img src="{{ $item->preacher->photo }}" alt="" style="width: 80px" />
                                         <span>{{ date('d M Y', $item->date) }}</span>
                                         {{ $item->title }}

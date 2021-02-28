@@ -109,6 +109,7 @@ Route::get('action/success', 'AdminInviteController@actionSuccess')->name('actio
 //other page routes
 Route::get('sermons', 'SermonController@index')->name('sermon.list');
 Route::get('sermon/read/{id}', 'SermonController@readNow')->name('read.sermon');
+Route::get('sermon/fix/slug/dev', 'Dashboard\SermonsController@fixSlug');
 
 //media-center
 Route::get('media', 'Activity\ResourceController@index')->name('media.list');

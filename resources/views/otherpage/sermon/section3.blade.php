@@ -15,7 +15,7 @@
                         <div class="grid-box">
                             <div class="grid-item">
                                 <div class="cnt-box cnt-box-blog-side boxed">
-                                    <a href="{{ route('read.sermon', $sermon->uuid) }}" class="img-box">
+                                    <a href="{{ route('read.sermon', $sermon->slug) }}" class="img-box">
                                         <div class="blog-date">
                                             <span>{{ date('d', $sermon->date) }}</span>
                                             <span>{{ date('M Y', $sermon->date) }}</span>
@@ -23,7 +23,7 @@
                                         <img src="{{ $sermon->preacher->photo }}" alt="" />
                                     </a>
                                     <div class="caption">
-                                        <h2><a href="{{ route('read.sermon', $sermon->uuid) }}" style="color: #3E566B; text-decoration: none;">{{ $sermon->heading }}</a></h2>
+                                        <h2><a href="{{ route('read.sermon', $sermon->slug) }}" style="color: #3E566B; text-decoration: none;">{{ $sermon->heading }}</a></h2>
                                         <ul class="icon-list icon-list-horizontal">
                                             <li><i class="icon-bookmark"></i><a href="#">{{ $sermon->preacher->fullname }}</a></li>
                                         </ul>

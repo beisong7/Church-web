@@ -92,8 +92,8 @@ class SermonController extends Controller
     }
 
     public function readNow(Request $request, $uuid){
-        $sermon = Sermons::whereUuid($uuid)->first();
-        $sermons = Sermons::orderBy('date', 'desc')->where('uuid', '!=',$uuid)->where('published', true)->take(5)->get();
+        $sermon = Sermons::whereUuid($uuid)->orWhere('slug', $uuid)->first();
+        $sermons = Sermons::orderBy('date', 'desc')->where('uuid', '!=',$uuid)->orWhere('slug', '!=', $uuid)->where('published', true)->take(5)->get();
 
         $sermon->increment('hits', 1);
         if(!empty($sermon)){
