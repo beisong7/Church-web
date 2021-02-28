@@ -75,7 +75,7 @@ $bd_class="content-detached-left-sidebar ecommerce-application";
                                         @forelse($sermons as $sermon)
                                             <tr>
                                                 <td class="product-category" style="max-width: 400px">{{ $sermon->title }}</td>
-                                                <td class="product-category">{{ date('F d, Y', strtotime($sermon->updated_at)) }}</td>
+                                                <td class="product-category">{{ date('F d, Y', strtotime($sermon->created_at)) }}</td>
                                                 <td class="product-category">{{ $sermon->published?'Yes':'No' }}</td>
                                                 <td class="product-action">
                                                     <a href="{{ route('sermon.toggle', $sermon->uuid) }}" class="ml-2 text-white">
